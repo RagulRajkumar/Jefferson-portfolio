@@ -1,349 +1,173 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Ronald Jefferson — Photography Portfolio</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Ronald Jefferson — Photography</title>
+<meta name="description" content="Ronald Jefferson is a photographer working across landscape, architecture, portrait, wildlife, fashion, event, food and product photography. A quiet way of looking.">
+<meta property="og:title" content="Ronald Jefferson — Photography">
+<meta property="og:description" content="A quiet way of looking. Landscape, architecture, portrait, wildlife, fashion, event, food and product photography.">
+<meta property="og:type" content="website">
+<meta property="og:image" content="images/hero.jpg">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Ronald Jefferson — Photography">
+<meta name="twitter:description" content="A quiet way of looking.">
+<link rel="canonical" href="https://example.com/">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600&family=Inter:wght@400;500&display=swap" rel="stylesheet">
-<style>
-html{scroll-behavior:smooth}
-*{box-sizing:border-box}
-body{margin:0;background:#0D0D0C;color:#CBBEAF;font-family:Inter,system-ui,sans-serif;-webkit-font-smoothing:antialiased}
-a{color:#CBBEAF;text-decoration:none}
-::selection{background:rgba(226,75,77,.4);color:#fff}
-section[id]{scroll-margin-top:70px}
-img{max-width:100%}
-header{position:fixed;top:0;left:0;right:0;z-index:60;display:flex;align-items:center;justify-content:space-between;padding:0 clamp(20px,4vw,44px);height:70px;background:transparent;border-bottom:1px solid transparent;transition:background .35s,border-color .35s}
-header.solid{background:#0D0D0C;border-bottom:1px solid rgba(203,190,175,.12)}
-.brand{font-family:'Cormorant Garamond',Georgia,serif;font-size:21px;letter-spacing:.08em;font-weight:500}
-header nav{display:flex;align-items:center;gap:clamp(14px,2vw,28px)}
-.links{display:none;gap:26px}
-@media(min-width:920px){.links{display:flex}}
-.links a{font-size:10px;letter-spacing:.28em;text-transform:uppercase;transition:color .2s}
-.links a:hover,.links a.act{color:#E24B4D}
-#burger{display:flex;flex-direction:column;gap:6px;background:transparent;border:none;cursor:pointer;padding:12px 6px}
-#burger span{display:block;width:22px;height:1px;background:#CBBEAF}
-.hero{position:relative;height:100vh;min-height:560px;overflow:hidden}
-.heroimg{position:absolute;inset:0;animation:heroZoom 2.6s cubic-bezier(.22,.6,.22,1) both}
-.heroimg img{position:absolute;top:-12%;left:0;width:100%;height:124%;object-fit:cover;will-change:transform}
-.hero .shade,.itl .shade{position:absolute;inset:0;background:rgba(13,13,12,.34)}
-.itl .shade{background:rgba(13,13,12,.18)}
-.herotxt{position:relative;height:100%;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;padding:0 5vw}
-.herotxt h1{margin:0;font-family:'Cormorant Garamond',Georgia,serif;font-weight:500;font-size:clamp(54px,9vw,150px);line-height:.98;letter-spacing:.03em;text-wrap:balance;animation:rise 1s cubic-bezier(.22,.6,.22,1) .2s both}
-.herotxt p{margin:26px 0 0;font-size:11px;letter-spacing:.3em;text-transform:uppercase;color:rgba(203,190,175,.85);animation:rise 1s cubic-bezier(.22,.6,.22,1) .5s both}
-.cue{position:absolute;bottom:0;left:50%;transform:translateX(-50%);display:flex;flex-direction:column;align-items:center;gap:12px;animation:fadein 1s ease-out 1.15s both}
-.cue .s{font-size:9px;letter-spacing:.32em;text-transform:uppercase;color:rgba(203,190,175,.55)}
-.cue .track{display:block;width:1px;height:58px;background:rgba(203,190,175,.22);overflow:hidden;position:relative}
-.cue .dot{position:absolute;left:0;top:0;display:block;width:1px;height:16px;background:#CBBEAF;animation:cueMove 2.2s cubic-bezier(.4,.2,.4,1) 1.4s infinite}
-.wrap{max-width:1300px;margin:0 auto;padding-left:clamp(20px,5vw,44px);padding-right:clamp(20px,5vw,44px)}
-.about{padding-top:clamp(90px,12vw,150px);padding-bottom:clamp(70px,9vw,120px);display:grid;grid-template-columns:1fr;gap:clamp(36px,6vw,84px);align-items:center}
-@media(min-width:900px){.about{grid-template-columns:minmax(0,5fr) minmax(0,7fr)}}
-.about figure{margin:0;overflow:hidden;background:#141412}
-.about figure img{display:block;width:100%;aspect-ratio:4/5;object-fit:cover}
-.kicker{margin:0 0 26px;font-size:10px;letter-spacing:.3em;text-transform:uppercase;color:rgba(203,190,175,.5)}
-.about h2{margin:0 0 22px;font-family:'Cormorant Garamond',Georgia,serif;font-weight:400;font-size:clamp(30px,3.4vw,46px);line-height:1.15;text-wrap:balance}
-.rule{display:block;height:2px;background:#E24B4D}
-.r26{width:26px}.r24{width:24px}.r30{width:30px;margin-bottom:26px}
-.about p.bio{margin:0 0 34px;font-size:15.5px;line-height:1.75;max-width:62ch;color:rgba(203,190,175,.8)}
-.specs{list-style:none;margin:0;padding:0}
-.specs li{display:flex;gap:18px;align-items:baseline;padding:13px 0;border-top:1px solid rgba(203,190,175,.12);font-size:10px;letter-spacing:.28em;text-transform:uppercase}
-.specs li:last-child{border-bottom:1px solid rgba(203,190,175,.12)}
-.specs .n{color:#E24B4D}
-.cat{max-width:1300px;margin:0 auto;padding:clamp(40px,6vw,80px) clamp(20px,5vw,44px)}
-.swatch{padding:clamp(34px,5vw,60px)}
-.swatch h2{margin:0;font-family:'Cormorant Garamond',Georgia,serif;font-weight:500;font-size:clamp(34px,4.4vw,62px);line-height:1;letter-spacing:.14em;text-transform:uppercase}
-.swatch .rule{margin:22px 0 14px}
-.swatch .idx{margin:0;font-size:10px;letter-spacing:.3em;text-transform:uppercase;color:rgba(203,190,175,.8)}
-.grid{margin-top:28px;column-count:3;column-gap:26px}
-@media(max-width:1100px){.grid{column-count:2}}
-@media(max-width:700px){.grid{column-count:1}}
-.fig{margin:0 0 26px;break-inside:avoid;position:relative;overflow:hidden;background:#141412}
-.fig button{display:block;width:100%;padding:0;margin:0;border:none;background:transparent;cursor:pointer;line-height:0}
-.fig img{display:block;width:100%;height:auto;transition:transform .5s cubic-bezier(.25,.6,.25,1)}
-.fig:hover img{transform:scale(1.02)}
-.fig figcaption{position:absolute;left:0;right:0;bottom:0;display:flex;justify-content:space-between;gap:12px;padding:15px 16px 12px;background:rgba(13,13,12,.6);font-size:9.5px;letter-spacing:.25em;text-transform:uppercase;opacity:0;transition:opacity .3s;pointer-events:none}
-.fig:hover figcaption{opacity:1}
-.fig .no{color:#E24B4D}
-.itl{position:relative;height:72vh;min-height:420px;overflow:hidden;margin:clamp(30px,5vw,70px) 0}
-.itl img{position:absolute;top:-12%;left:0;width:100%;height:124%;object-fit:cover;will-change:transform}
-.itlcap{position:absolute;left:clamp(20px,5vw,44px);bottom:38px}
-.itlcap .rule{margin-bottom:12px}
-.itlcap p{margin:0;font-size:10px;letter-spacing:.32em;text-transform:uppercase}
-.contact{padding-top:clamp(90px,11vw,150px);padding-bottom:clamp(90px,11vw,150px);display:grid;grid-template-columns:1fr;gap:clamp(40px,6vw,90px)}
-@media(min-width:900px){.contact{grid-template-columns:1fr 1fr}}
-.contact h2{margin:0 0 34px;font-family:'Cormorant Garamond',Georgia,serif;font-weight:400;font-size:clamp(32px,3.6vw,50px);line-height:1.12;text-wrap:balance}
-.row{display:flex;flex-direction:column;gap:6px;padding:16px 0;border-top:1px solid rgba(203,190,175,.12)}
-.row:last-child{border-bottom:1px solid rgba(203,190,175,.12)}
-.row .k{font-size:9px;letter-spacing:.3em;text-transform:uppercase;color:rgba(203,190,175,.45)}
-.row .v,.row a{font-size:15px}
-.u{width:fit-content}
-.u::after{content:'';display:block;height:1px;width:0;background:#E24B4D;transition:width .25s}
-.u:hover::after{width:100%}
-form{display:flex;flex-direction:column;gap:34px}
-form label{display:block;margin-bottom:8px;font-size:9px;letter-spacing:.3em;text-transform:uppercase;color:rgba(203,190,175,.45)}
-.input{width:100%;background:transparent;border:none;border-bottom:1px solid rgba(203,190,175,.3);border-radius:0;color:#CBBEAF;font-size:15px;font-family:inherit;padding:10px 0;caret-color:#E24B4D;line-height:1.6}
-.input:focus{outline:none;border-bottom-color:#E24B4D}
-textarea.input{resize:vertical}
-.send{align-self:flex-start;background:transparent;border:1px solid rgba(203,190,175,.35);color:#CBBEAF;font-size:10px;letter-spacing:.3em;text-transform:uppercase;font-family:inherit;padding:16px 34px;cursor:pointer;transition:background .25s,color .25s,border-color .25s}
-.send:hover{background:#CBBEAF;color:#0D0D0C;border-color:#CBBEAF}
-footer{background:#384549;padding:52px clamp(20px,5vw,44px) 40px}
-.finner{max-width:1300px;margin:0 auto;display:flex;flex-direction:column;gap:34px}
-.fnav{display:flex;flex-wrap:wrap;gap:28px}
-.fnav a{font-size:10px;letter-spacing:.28em;text-transform:uppercase}
-.fnav a:hover{color:#E24B4D}
-.fmeta{display:flex;flex-wrap:wrap;gap:14px;justify-content:space-between;border-top:1px solid rgba(203,190,175,.18);padding-top:22px;font-size:9px;letter-spacing:.26em;text-transform:uppercase;color:rgba(203,190,175,.55)}
-#menu{display:none;position:fixed;inset:0;z-index:90;background:#464A32;overflow-y:auto;padding:100px clamp(28px,8vw,90px) 60px}
-#menu.open{display:block;animation:fadein .3s ease-out both}
-#mclose{position:absolute;top:18px;right:clamp(20px,4vw,44px);background:transparent;border:none;color:#CBBEAF;font-size:24px;cursor:pointer;padding:10px}
-#menu nav{display:flex;flex-direction:column}
-#menu nav a{display:flex;align-items:baseline;gap:18px;padding:12px 0;border-bottom:1px solid rgba(203,190,175,.16)}
-#menu.open nav a{animation:rise .55s cubic-bezier(.22,.6,.22,1) both}
-.mno{font-size:10px;letter-spacing:.25em;color:#E24B4D}
-.mlbl{font-family:'Cormorant Garamond',Georgia,serif;font-size:clamp(30px,6vh,52px);line-height:1.05}
-#menu nav a:hover .mlbl{color:#E24B4D}
-#lb{display:none;position:fixed;inset:0;z-index:100;background:#000;flex-direction:column;align-items:center;justify-content:center;padding:clamp(12px,4vw,64px)}
-#lb.open{display:flex;animation:fadein .25s ease-out both}
-#lbimg{max-width:90vw;max-height:85vh;width:auto;height:auto;display:block;animation:lbIn .35s cubic-bezier(.22,.6,.22,1) both}
-.lbmeta{margin-top:20px;display:flex;align-items:baseline;gap:20px;font-size:10px;letter-spacing:.28em;text-transform:uppercase}
-.lbmeta .c{color:rgba(203,190,175,.85)}
-.lbmeta .n{color:#E24B4D}
-.lbbtn{position:absolute;background:transparent;border:none;color:#CBBEAF;cursor:pointer;line-height:1}
-#lbprev{left:8px;top:50%;transform:translateY(-50%);font-size:28px;padding:14px}
-#lbnext{right:8px;top:50%;transform:translateY(-50%);font-size:28px;padding:14px}
-#lbx{top:12px;right:16px;font-size:22px;padding:12px}
-.reveal{opacity:0;transform:translateY(26px);transition:opacity .65s ease-out,transform .65s ease-out}
-.reveal.in{opacity:1;transform:none}
-.wipe{opacity:1;transform:none;clip-path:inset(0 100% 0 0);transition:clip-path .9s cubic-bezier(.22,.6,.22,1)}
-.wipe.in{clip-path:inset(-1px)}
-.wipe .rule{width:0;transition:width .6s cubic-bezier(.22,.6,.22,1) .45s}
-.wipe.in .rule{width:26px}
-.now,.now .rule{transition:none!important}
-button:focus-visible,a:focus-visible,.input:focus-visible{outline:2px solid #E24B4D;outline-offset:2px}
-.fig button:focus-visible{outline-offset:-2px}
-@keyframes rise{from{opacity:0;transform:translateY(28px)}to{opacity:1;transform:translateY(0)}}
-@keyframes fadein{from{opacity:0}to{opacity:1}}
-@keyframes heroZoom{from{transform:scale(1.07)}to{transform:scale(1)}}
-@keyframes cueMove{0%{transform:translateY(-16px);opacity:0}30%{opacity:1}100%{transform:translateY(58px);opacity:0}}
-@keyframes lbIn{from{opacity:0;transform:scale(.965)}to{opacity:1;transform:scale(1)}}
-@media (prefers-reduced-motion: reduce){html{scroll-behavior:auto}*{animation:none!important;transition:none!important}.reveal,.wipe{opacity:1;transform:none;clip-path:none}.wipe .rule{width:26px}}
-</style>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;0,9..144,600;1,9..144,400;1,9..144,500&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-<header id="hdr"><a class="brand" href="#top">Ronald Jefferson</a><nav aria-label="Primary"><div class="links"><a id="n-about" href="#about">About</a><a id="n-work" href="#landscape">Work</a><a id="n-contact" href="#contact">Contact</a></div><button id="burger" aria-label="Open menu"><span></span><span></span></button></nav></header>
-<main>
-<section id="top" class="hero" data-screen-label="Hero"><div class="heroimg"><img data-plx src="images/hero.jpg" alt="Camel caravan crossing the Jaisalmer desert in dust haze" width="1537" height="909"></div><div class="shade"></div><div class="herotxt"><h1>Ronald Jefferson</h1><p>Travel, Wildlife &amp; Portrait Photographer — Bengaluru</p></div><div class="cue" aria-hidden="true"><span class="s">Scroll</span><span class="track"><span class="dot"></span></span></div></section>
-<section id="about" class="wrap about" data-screen-label="About"><figure class="reveal"><img src="images/profile.jpg" alt="Portrait of Ronald Jefferson" width="749" height="1200" loading="lazy"></figure><div class="reveal"><p class="kicker">About</p><h2>A quiet way of looking.</h2><span class="rule r30"></span><p class="bio">Ronald Jefferson is a Bengaluru-based photographer working across travel, wildlife and portraiture. From Rajasthan’s forts and deserts to city streets at dusk, his work waits for the quiet in a scene — the light between moments. He shoots for people, brands and publications across India.</p><ul class="specs"><li><span class="n">01</span><span>Travel &amp; Documentary</span></li><li><span class="n">02</span><span>Wildlife</span></li><li><span class="n">03</span><span>Portraiture</span></li><li><span class="n">04</span><span>Architecture</span></li><li><span class="n">05</span><span>Editorial &amp; Commercial</span></li></ul></div></section>
-<div id="work">
-<section id="landscape" class="cat" data-screen-label="Landscape">
-<div class="swatch reveal wipe" style="background:#464A32"><h2>Landscape</h2><span class="rule r26"></span><p class="idx">N° 01 — 16 images</p></div>
-<div class="grid">
-<figure class="fig reveal"><button data-src="images/landscape/01.jpg" data-cap="Landscape — 01" data-cnt="01 / 16" data-alt="Landscape photograph 1 of 16" aria-label="Open landscape photograph 1 of 16"><img src="images/landscape/01.jpg" alt="Landscape photograph 1 of 16" width="1131" height="809" loading="lazy"></button><figcaption><span>Landscape — 01</span><span class="no">01</span></figcaption></figure>
-<figure class="fig reveal"><button data-src="images/landscape/02.jpg" data-cap="Landscape — 02" data-cnt="02 / 16" data-alt="Landscape photograph 2 of 16" aria-label="Open landscape photograph 2 of 16"><img src="images/landscape/02.jpg" alt="Landscape photograph 2 of 16" width="1600" height="900" loading="lazy"></button><figcaption><span>Landscape — 02</span><span class="no">02</span></figcaption></figure>
-<figure class="fig reveal"><button data-src="images/landscape/03.jpg" data-cap="Landscape — 03" data-cnt="03 / 16" data-alt="Landscape photograph 3 of 16" aria-label="Open landscape photograph 3 of 16"><img src="images/landscape/03.jpg" alt="Landscape photograph 3 of 16" width="1600" height="900" loading="lazy"></button><figcaption><span>Landscape — 03</span><span class="no">03</span></figcaption></figure>
-<figure class="fig reveal"><button data-src="images/landscape/04.jpg" data-cap="Landscape — 04" data-cnt="04 / 16" data-alt="Landscape photograph 4 of 16" aria-label="Open landscape photograph 4 of 16"><img src="images/landscape/04.jpg" alt="Landscape photograph 4 of 16" width="1600" height="900" loading="lazy"></button><figcaption><span>Landscape — 04</span><span class="no">04</span></figcaption></figure>
-<figure class="fig reveal"><button data-src="images/landscape/05.jpg" data-cap="City Palace" data-cnt="05 / 16" data-alt="City Palace — landscape photograph" aria-label="Open landscape photograph 5 of 16"><img src="images/landscape/05.jpg" alt="City Palace — landscape photograph" width="1338" height="866" loading="lazy"></button><figcaption><span>City Palace</span><span class="no">05</span></figcaption></figure>
-<figure class="fig reveal"><button data-src="images/landscape/06.jpg" data-cap="Floating Park" data-cnt="06 / 16" data-alt="Floating Park — landscape photograph" aria-label="Open landscape photograph 6 of 16"><img src="images/landscape/06.jpg" alt="Floating Park — landscape photograph" width="1600" height="900" loading="lazy"></button><figcaption><span>Floating Park</span><span class="no">06</span></figcaption></figure>
-<figure class="fig reveal"><button data-src="images/landscape/07.jpg" data-cap="Ghost Village" data-cnt="07 / 16" data-alt="Ghost Village — landscape photograph" aria-label="Open landscape photograph 7 of 16"><img src="images/landscape/07.jpg" alt="Ghost Village — landscape photograph" width="1600" height="902" loading="lazy"></button><figcaption><span>Ghost Village</span><span class="no">07</span></figcaption></figure>
-<figure class="fig reveal"><button data-src="images/landscape/08.jpg" data-cap="Jaipur City" data-cnt="08 / 16" data-alt="Jaipur City — landscape photograph" aria-label="Open landscape photograph 8 of 16"><img src="images/landscape/08.jpg" alt="Jaipur City — landscape photograph" width="1600" height="901" loading="lazy"></button><figcaption><span>Jaipur City</span><span class="no">08</span></figcaption></figure>
-<figure class="fig reveal"><button data-src="images/landscape/09.jpg" data-cap="Jaisalmer Desert" data-cnt="09 / 16" data-alt="Jaisalmer Desert — landscape photograph" aria-label="Open landscape photograph 9 of 16"><img src="images/landscape/09.jpg" alt="Jaisalmer Desert — landscape photograph" width="1537" height="909" loading="lazy"></button><figcaption><span>Jaisalmer Desert</span><span class="no">09</span></figcaption></figure>
-<figure class="fig reveal"><button data-src="images/landscape/10.jpg" data-cap="Kadavul" data-cnt="10 / 16" data-alt="Kadavul — landscape photograph" aria-label="Open landscape photograph 10 of 16"><img src="images/landscape/10.jpg" alt="Kadavul — landscape photograph" width="1600" height="1201" loading="lazy"></button><figcaption><span>Kadavul</span><span class="no">10</span></figcaption></figure>
-<figure class="fig reveal"><button data-src="images/landscape/11.jpg" data-cap="Lake 1" data-cnt="11 / 16" data-alt="Lake 1 — landscape photograph" aria-label="Open landscape photograph 11 of 16"><img src="images/landscape/11.jpg" alt="Lake 1 — landscape photograph" width="1538" height="866" loading="lazy"></button><figcaption><span>Lake 1</span><span class="no">11</span></figcaption></figure>
-<figure class="fig reveal"><button data-src="images/landscape/12.jpg" data-cap="Lake 2" data-cnt="12 / 16" data-alt="Lake 2 — landscape photograph" aria-label="Open landscape photograph 12 of 16"><img src="images/landscape/12.jpg" alt="Lake 2 — landscape photograph" width="1537" height="978" loading="lazy"></button><figcaption><span>Lake 2</span><span class="no">12</span></figcaption></figure>
-<figure class="fig reveal"><button data-src="images/landscape/13.jpg" data-cap="Meharagarh Fort" data-cnt="13 / 16" data-alt="Meharagarh Fort — landscape photograph" aria-label="Open landscape photograph 13 of 16"><img src="images/landscape/13.jpg" alt="Meharagarh Fort — landscape photograph" width="1600" height="906" loading="lazy"></button><figcaption><span>Meharagarh Fort</span><span class="no">13</span></figcaption></figure>
-<figure class="fig reveal"><button data-src="images/landscape/14.jpg" data-cap="Moss Fort" data-cnt="14 / 16" data-alt="Moss Fort — landscape photograph" aria-label="Open landscape photograph 14 of 16"><img src="images/landscape/14.jpg" alt="Moss Fort — landscape photograph" width="1600" height="1200" loading="lazy"></button><figcaption><span>Moss Fort</span><span class="no">14</span></figcaption></figure>
-<figure class="fig reveal"><button data-src="images/landscape/15.jpg" data-cap="Pykara Falls" data-cnt="15 / 16" data-alt="Pykara Falls — landscape photograph" aria-label="Open landscape photograph 15 of 16"><img src="images/landscape/15.jpg" alt="Pykara Falls — landscape photograph" width="1340" height="978" loading="lazy"></button><figcaption><span>Pykara Falls</span><span class="no">15</span></figcaption></figure>
-<figure class="fig reveal"><button data-src="images/landscape/16.jpg" data-cap="Udaipur Lake" data-cnt="16 / 16" data-alt="Udaipur Lake — landscape photograph" aria-label="Open landscape photograph 16 of 16"><img src="images/landscape/16.jpg" alt="Udaipur Lake — landscape photograph" width="1600" height="921" loading="lazy"></button><figcaption><span>Udaipur Lake</span><span class="no">16</span></figcaption></figure>
+
+<!-- Preloader -->
+<div id="preloader" aria-hidden="true">
+  <div class="pre-mark">Ronald Jefferson</div>
+  <div class="pre-line"></div>
 </div>
-</section>
-<section id="architecture" class="cat" data-screen-label="Architecture">
-<div class="swatch reveal wipe" style="background:#384549"><h2>Architecture</h2><span class="rule r26"></span><p class="idx">N° 02 — 21 images</p></div>
-<div class="grid">
-<figure class="fig reveal"><button data-src="images/architecture/01.jpg" data-cap="Architecture — 01" data-cnt="01 / 21" data-alt="Architecture photograph 1 of 21" aria-label="Open architecture photograph 1 of 21"><img src="images/architecture/01.jpg" alt="Architecture photograph 1 of 21" width="1280" height="1600" loading="lazy"></button><figcaption><span>Architecture — 01</span><span class="no">01</span></figcaption></figure>
-<figure class="fig reveal"><button data-src="images/architecture/02.jpg" data-cap="Architecture — 02" data-cnt="02 / 21" data-alt="Architecture photograph 2 of 21" aria-label="Open architecture photograph 2 of 21"><img src="images/architecture/02.jpg" alt="Architecture photograph 2 of 21" width="1600" height="900" loading="lazy"></button><figcaption><span>Architecture — 02</span><span class="no">02</span></figcaption></figure>
-<figure class="fig reveal"><button data-src="images/architecture/03.jpg" data-cap="Amer Fort" data-cnt="03 / 21" data-alt="Amer Fort — architecture photograph" aria-label="Open architecture photograph 3 of 21"><img src="images/architecture/03.jpg" alt="Amer Fort — architecture photograph" width="1600" height="900" loading="lazy"></button><figcaption><span>Amer Fort</span><span class="no">03</span></figcaption></figure>
-<figure class="fig reveal"><button data-src="images/architecture/04.jpg" data-cap="Darbar Hall" data-cnt="04 / 21" data-alt="Darbar Hall — architecture photograph" aria-label="Open architecture photograph 4 of 21"><img src="images/architecture/04.jpg" alt="Darbar Hall — architecture photograph" width="1600" height="901" loading="lazy"></button><figcaption><span>Darbar Hall</span><span class="no">04</span></figcaption></figure>
-<figure class="fig reveal"><button data-src="images/architecture/05.jpg" data-cap="Frame Parunga Ji 1" data-cnt="05 / 21" data-alt="Frame Parunga Ji 1 — architecture photograph" aria-label="Open architecture photograph 5 of 21"><img src="images/architecture/05.jpg" alt="Frame Parunga Ji 1 — architecture photograph" width="1144" height="1369" loading="lazy"></button><figcaption><span>Frame Parunga Ji 1</span><span class="no">05</span></figcaption></figure>
-<figure class="fig reveal"><button data-src="images/architecture/06.jpg" data-cap="Frame Parunga Ji 2" data-cnt="06 / 21" data-alt="Frame Parunga Ji 2 — architecture photograph" aria-label="Open architecture photograph 6 of 21"><img src="images/architecture/06.jpg" alt="Frame Parunga Ji 2 — architecture photograph" width="1600" height="1117" loading="lazy"></button><figcaption><span>Frame Parunga Ji 2</span><span class="no">06</span></figcaption></figure>
-<figure class="fig reveal"><button data-src="images/architecture/07.jpg" data-cap="Frame Parunga Ji 3" data-cnt="07 / 21" data-alt="Frame Parunga Ji 3 — architecture photograph" aria-label="Open architecture photograph 7 of 21"><img src="images/architecture/07.jpg" alt="Frame Parunga Ji 3 — architecture photograph" width="1097" height="1369" loading="lazy"></button><figcaption><span>Frame Parunga Ji 3</span><span class="no">07</span></figcaption></figure>
-<figure class="fig reveal"><button data-src="images/architecture/08.jpg" data-cap="Gadisar Lake" data-cnt="08 / 21" data-alt="Gadisar Lake — architecture photograph" aria-label="Open architecture photograph 8 of 21"><img src="images/architecture/08.jpg" alt="Gadisar Lake — architecture photograph" width="1534" height="953" loading="lazy"></button><figcaption><span>Gadisar Lake</span><span class="no">08</span></figcaption></figure>
-<figure class="fig reveal"><button data-src="images/architecture/09.jpg" data-cap="Ghost Village 3" data-cnt="09 / 21" data-alt="Ghost Village 3 — architecture photograph" aria-label="Open architecture photograph 9 of 21"><img src="images/architecture/09.jpg" alt="Ghost Village 3 — architecture photograph" width="900" height="1600" loading="lazy"></button><figcaption><span>Ghost Village 3</span><span class="no">09</span></figcaption></figure>
-<figure class="fig reveal"><button data-src="images/architecture/10.jpg" data-cap="Hawa Mahal" data-cnt="10 / 21" data-alt="Hawa Mahal — architecture photograph" aria-label="Open architecture photograph 10 of 21"><img src="images/architecture/10.jpg" alt="Hawa Mahal — architecture photograph" width="1600" height="1170" loading="lazy"></button><figcaption><span>Hawa Mahal</span><span class="no">10</span></figcaption></figure>
-<figure class="fig reveal"><button data-src="images/architecture/11.jpg" data-cap="Jaisalmer Kallarai" data-cnt="11 / 21" data-alt="Jaisalmer Kallarai — architecture photograph" aria-label="Open architecture photograph 11 of 21"><img src="images/architecture/11.jpg" alt="Jaisalmer Kallarai — architecture photograph" width="1600" height="914" loading="lazy"></button><figcaption><span>Jaisalmer Kallarai</span><span class="no">11</span></figcaption></figure>
-<figure class="fig reveal"><button data-src="images/architecture/12.jpg" data-cap="Jal Mahal" data-cnt="12 / 21" data-alt="Jal Mahal — architecture photograph" aria-label="Open architecture photograph 12 of 21"><img src="images/architecture/12.jpg" alt="Jal Mahal — architecture photograph" width="1600" height="586" loading="lazy"></button><figcaption><span>Jal Mahal</span><span class="no">12</span></figcaption></figure>
-<figure class="fig reveal"><button data-src="images/architecture/13.jpg" data-cap="Jodhpur 1" data-cnt="13 / 21" data-alt="Jodhpur 1 — architecture photograph" aria-label="Open architecture photograph 13 of 21"><img src="images/architecture/13.jpg" alt="Jodhpur 1 — architecture photograph" width="995" height="1600" loading="lazy"></button><figcaption><span>Jodhpur 1</span><span class="no">13</span></figcaption></figure>
-<figure class="fig reveal"><button data-src="images/architecture/14.jpg" data-cap="Jodhpur Palace 5" data-cnt="14 / 21" data-alt="Jodhpur Palace 5 — architecture photograph" aria-label="Open architecture photograph 14 of 21"><img src="images/architecture/14.jpg" alt="Jodhpur Palace 5 — architecture photograph" width="1600" height="1135" loading="lazy"></button><figcaption><span>Jodhpur Palace 5</span><span class="no">14</span></figcaption></figure>
-<figure class="fig reveal"><button data-src="images/architecture/15.jpg" data-cap="Kadhavu" data-cnt="15 / 21" data-alt="Kadhavu — architecture photograph" aria-label="Open architecture photograph 15 of 21"><img src="images/architecture/15.jpg" alt="Kadhavu — architecture photograph" width="1028" height="1597" loading="lazy"></button><figcaption><span>Kadhavu</span><span class="no">15</span></figcaption></figure>
-<figure class="fig reveal"><button data-src="images/architecture/16.jpg" data-cap="Kallarai 2" data-cnt="16 / 21" data-alt="Kallarai 2 — architecture photograph" aria-label="Open architecture photograph 16 of 21"><img src="images/architecture/16.jpg" alt="Kallarai 2 — architecture photograph" width="1600" height="1078" loading="lazy"></button><figcaption><span>Kallarai 2</span><span class="no">16</span></figcaption></figure>
-<figure class="fig reveal"><button data-src="images/architecture/17.jpg" data-cap="Panna Meenaka Kund" data-cnt="17 / 21" data-alt="Panna Meenaka Kund — architecture photograph" aria-label="Open architecture photograph 17 of 21"><img src="images/architecture/17.jpg" alt="Panna Meenaka Kund — architecture photograph" width="1600" height="901" loading="lazy"></button><figcaption><span>Panna Meenaka Kund</span><span class="no">17</span></figcaption></figure>
-<figure class="fig reveal"><button data-src="images/architecture/18.jpg" data-cap="Patrika Gate" data-cnt="18 / 21" data-alt="Patrika Gate — architecture photograph" aria-label="Open architecture photograph 18 of 21"><img src="images/architecture/18.jpg" alt="Patrika Gate — architecture photograph" width="1600" height="1200" loading="lazy"></button><figcaption><span>Patrika Gate</span><span class="no">18</span></figcaption></figure>
-<figure class="fig reveal"><button data-src="images/architecture/19.jpg" data-cap="Severu 1" data-cnt="19 / 21" data-alt="Severu 1 — architecture photograph" aria-label="Open architecture photograph 19 of 21"><img src="images/architecture/19.jpg" alt="Severu 1 — architecture photograph" width="1600" height="833" loading="lazy"></button><figcaption><span>Severu 1</span><span class="no">19</span></figcaption></figure>
-<figure class="fig reveal"><button data-src="images/architecture/20.jpg" data-cap="Severu 2" data-cnt="20 / 21" data-alt="Severu 2 — architecture photograph" aria-label="Open architecture photograph 20 of 21"><img src="images/architecture/20.jpg" alt="Severu 2 — architecture photograph" width="1600" height="964" loading="lazy"></button><figcaption><span>Severu 2</span><span class="no">20</span></figcaption></figure>
-<figure class="fig reveal"><button data-src="images/architecture/21.jpg" data-cap="Udaipur Palace 16" data-cnt="21 / 21" data-alt="Udaipur Palace 16 — architecture photograph" aria-label="Open architecture photograph 21 of 21"><img src="images/architecture/21.jpg" alt="Udaipur Palace 16 — architecture photograph" width="1600" height="614" loading="lazy"></button><figcaption><span>Udaipur Palace 16</span><span class="no">21</span></figcaption></figure>
-</div>
-</section>
-<section class="itl" data-screen-label="Interlude"><img data-plx src="images/landscape/08.jpg" alt="Rooftops of Jaipur, the pink city, at dusk" loading="lazy"><div class="shade"></div><div class="itlcap reveal"><span class="rule r24"></span><p>Jaipur, at dusk</p></div></section>
-<section id="portrait" class="cat" data-screen-label="Portrait">
-<div class="swatch reveal wipe" style="background:#464A32"><h2>Portrait</h2><span class="rule r26"></span><p class="idx">N° 03 — 16 images</p></div>
-<div class="grid">
-<figure class="fig reveal"><button data-src="images/portrait/01.jpg" data-cap="Portrait — 01" data-cnt="01 / 16" data-alt="Portrait photograph 1 of 16" aria-label="Open portrait photograph 1 of 16"><img src="images/portrait/01.jpg" alt="Portrait photograph 1 of 16" width="1086" height="724" loading="lazy"></button><figcaption><span>Portrait — 01</span><span class="no">01</span></figcaption></figure>
-<figure class="fig reveal"><button data-src="images/portrait/02.jpg" data-cap="Portrait — 02" data-cnt="02 / 16" data-alt="Portrait photograph 2 of 16" aria-label="Open portrait photograph 2 of 16"><img src="images/portrait/02.jpg" alt="Portrait photograph 2 of 16" width="900" height="1600" loading="lazy"></button><figcaption><span>Portrait — 02</span><span class="no">02</span></figcaption></figure>
-<figure class="fig reveal"><button data-src="images/portrait/03.jpg" data-cap="Portrait — 03" data-cnt="03 / 16" data-alt="Portrait photograph 3 of 16" aria-label="Open portrait photograph 3 of 16"><img src="images/portrait/03.jpg" alt="Portrait photograph 3 of 16" width="1069" height="1600" loading="lazy"></button><figcaption><span>Portrait — 03</span><span class="no">03</span></figcaption></figure>
-<figure class="fig reveal"><button data-src="images/portrait/04.jpg" data-cap="Portrait — 04" data-cnt="04 / 16" data-alt="Portrait photograph 4 of 16" aria-label="Open portrait photograph 4 of 16"><img src="images/portrait/04.jpg" alt="Portrait photograph 4 of 16" width="1067" height="1600" loading="lazy"></button><figcaption><span>Portrait — 04</span><span class="no">04</span></figcaption></figure>
-<figure class="fig reveal"><button data-src="images/portrait/05.jpg" data-cap="Portrait — 05" data-cnt="05 / 16" data-alt="Portrait photograph 5 of 16" aria-label="Open portrait photograph 5 of 16"><img src="images/portrait/05.jpg" alt="Portrait photograph 5 of 16" width="1067" height="1600" loading="lazy"></button><figcaption><span>Portrait — 05</span><span class="no">05</span></figcaption></figure>
-<figure class="fig reveal"><button data-src="images/portrait/06.jpg" data-cap="Portrait — 06" data-cnt="06 / 16" data-alt="Portrait photograph 6 of 16" aria-label="Open portrait photograph 6 of 16"><img src="images/portrait/06.jpg" alt="Portrait photograph 6 of 16" width="1067" height="1600" loading="lazy"></button><figcaption><span>Portrait — 06</span><span class="no">06</span></figcaption></figure>
-<figure class="fig reveal"><button data-src="images/portrait/07.jpg" data-cap="Portrait — 07" data-cnt="07 / 16" data-alt="Portrait photograph 7 of 16" aria-label="Open portrait photograph 7 of 16"><img src="images/portrait/07.jpg" alt="Portrait photograph 7 of 16" width="1143" height="1600" loading="lazy"></button><figcaption><span>Portrait — 07</span><span class="no">07</span></figcaption></figure>
-<figure class="fig reveal"><button data-src="images/portrait/08.jpg" data-cap="Portrait — 08" data-cnt="08 / 16" data-alt="Portrait photograph 8 of 16" aria-label="Open portrait photograph 8 of 16"><img src="images/portrait/08.jpg" alt="Portrait photograph 8 of 16" width="1200" height="1600" loading="lazy"></button><figcaption><span>Portrait — 08</span><span class="no">08</span></figcaption></figure>
-<figure class="fig reveal"><button data-src="images/portrait/09.jpg" data-cap="Portrait — 09" data-cnt="09 / 16" data-alt="Portrait photograph 9 of 16" aria-label="Open portrait photograph 9 of 16"><img src="images/portrait/09.jpg" alt="Portrait photograph 9 of 16" width="1600" height="1067" loading="lazy"></button><figcaption><span>Portrait — 09</span><span class="no">09</span></figcaption></figure>
-<figure class="fig reveal"><button data-src="images/portrait/10.jpg" data-cap="Portrait — 10" data-cnt="10 / 16" data-alt="Portrait photograph 10 of 16" aria-label="Open portrait photograph 10 of 16"><img src="images/portrait/10.jpg" alt="Portrait photograph 10 of 16" width="1200" height="1600" loading="lazy"></button><figcaption><span>Portrait — 10</span><span class="no">10</span></figcaption></figure>
-<figure class="fig reveal"><button data-src="images/portrait/11.jpg" data-cap="Portrait — 11" data-cnt="11 / 16" data-alt="Portrait photograph 11 of 16" aria-label="Open portrait photograph 11 of 16"><img src="images/portrait/11.jpg" alt="Portrait photograph 11 of 16" width="1067" height="1600" loading="lazy"></button><figcaption><span>Portrait — 11</span><span class="no">11</span></figcaption></figure>
-<figure class="fig reveal"><button data-src="images/portrait/12.jpg" data-cap="Portrait — 12" data-cnt="12 / 16" data-alt="Portrait photograph 12 of 16" aria-label="Open portrait photograph 12 of 16"><img src="images/portrait/12.jpg" alt="Portrait photograph 12 of 16" width="1200" height="1600" loading="lazy"></button><figcaption><span>Portrait — 12</span><span class="no">12</span></figcaption></figure>
-<figure class="fig reveal"><button data-src="images/portrait/13.jpg" data-cap="Lady" data-cnt="13 / 16" data-alt="Lady — portrait photograph" aria-label="Open portrait photograph 13 of 16"><img src="images/portrait/13.jpg" alt="Lady — portrait photograph" width="1600" height="900" loading="lazy"></button><figcaption><span>Lady</span><span class="no">13</span></figcaption></figure>
-<figure class="fig reveal"><button data-src="images/portrait/14.jpg" data-cap="Tata" data-cnt="14 / 16" data-alt="Tata — portrait photograph" aria-label="Open portrait photograph 14 of 16"><img src="images/portrait/14.jpg" alt="Tata — portrait photograph" width="1600" height="1090" loading="lazy"></button><figcaption><span>Tata</span><span class="no">14</span></figcaption></figure>
-<figure class="fig reveal"><button data-src="images/portrait/15.jpg" data-cap="Two Bhai" data-cnt="15 / 16" data-alt="Two Bhai — portrait photograph" aria-label="Open portrait photograph 15 of 16"><img src="images/portrait/15.jpg" alt="Two Bhai — portrait photograph" width="1600" height="900" loading="lazy"></button><figcaption><span>Two Bhai</span><span class="no">15</span></figcaption></figure>
-<figure class="fig reveal"><button data-src="images/portrait/16.jpg" data-cap="Uncles" data-cnt="16 / 16" data-alt="Uncles — portrait photograph" aria-label="Open portrait photograph 16 of 16"><img src="images/portrait/16.jpg" alt="Uncles — portrait photograph" width="1600" height="900" loading="lazy"></button><figcaption><span>Uncles</span><span class="no">16</span></figcaption></figure>
-</div>
-</section>
-<section id="wildlife" class="cat" data-screen-label="Wildlife">
-<div class="swatch reveal wipe" style="background:#384549"><h2>Wildlife</h2><span class="rule r26"></span><p class="idx">N° 04 — 29 images</p></div>
-<div class="grid">
-<figure class="fig reveal"><button data-src="images/wildlife/01.jpg" data-cap="Wildlife — 01" data-cnt="01 / 29" data-alt="Wildlife photograph 1 of 29" aria-label="Open wildlife photograph 1 of 29"><img src="images/wildlife/01.jpg" alt="Wildlife photograph 1 of 29" width="1600" height="900" loading="lazy"></button><figcaption><span>Wildlife — 01</span><span class="no">01</span></figcaption></figure>
-<figure class="fig reveal"><button data-src="images/wildlife/02.jpg" data-cap="Wildlife — 02" data-cnt="02 / 29" data-alt="Wildlife photograph 2 of 29" aria-label="Open wildlife photograph 2 of 29"><img src="images/wildlife/02.jpg" alt="Wildlife photograph 2 of 29" width="1600" height="1200" loading="lazy"></button><figcaption><span>Wildlife — 02</span><span class="no">02</span></figcaption></figure>
-<figure class="fig reveal"><button data-src="images/wildlife/03.jpg" data-cap="Wildlife — 03" data-cnt="03 / 29" data-alt="Wildlife photograph 3 of 29" aria-label="Open wildlife photograph 3 of 29"><img src="images/wildlife/03.jpg" alt="Wildlife photograph 3 of 29" width="1600" height="900" loading="lazy"></button><figcaption><span>Wildlife — 03</span><span class="no">03</span></figcaption></figure>
-<figure class="fig reveal"><button data-src="images/wildlife/04.jpg" data-cap="Wildlife — 04" data-cnt="04 / 29" data-alt="Wildlife photograph 4 of 29" aria-label="Open wildlife photograph 4 of 29"><img src="images/wildlife/04.jpg" alt="Wildlife photograph 4 of 29" width="1600" height="900" loading="lazy"></button><figcaption><span>Wildlife — 04</span><span class="no">04</span></figcaption></figure>
-<figure class="fig reveal"><button data-src="images/wildlife/05.jpg" data-cap="Wildlife — 05" data-cnt="05 / 29" data-alt="Wildlife photograph 5 of 29" aria-label="Open wildlife photograph 5 of 29"><img src="images/wildlife/05.jpg" alt="Wildlife photograph 5 of 29" width="1400" height="1050" loading="lazy"></button><figcaption><span>Wildlife — 05</span><span class="no">05</span></figcaption></figure>
-<figure class="fig reveal"><button data-src="images/wildlife/06.jpg" data-cap="Wildlife — 06" data-cnt="06 / 29" data-alt="Wildlife photograph 6 of 29" aria-label="Open wildlife photograph 6 of 29"><img src="images/wildlife/06.jpg" alt="Wildlife photograph 6 of 29" width="1600" height="1200" loading="lazy"></button><figcaption><span>Wildlife — 06</span><span class="no">06</span></figcaption></figure>
-<figure class="fig reveal"><button data-src="images/wildlife/07.jpg" data-cap="Wildlife — 07" data-cnt="07 / 29" data-alt="Wildlife photograph 7 of 29" aria-label="Open wildlife photograph 7 of 29"><img src="images/wildlife/07.jpg" alt="Wildlife photograph 7 of 29" width="1600" height="900" loading="lazy"></button><figcaption><span>Wildlife — 07</span><span class="no">07</span></figcaption></figure>
-<figure class="fig reveal"><button data-src="images/wildlife/08.jpg" data-cap="Wildlife — 08" data-cnt="08 / 29" data-alt="Wildlife photograph 8 of 29" aria-label="Open wildlife photograph 8 of 29"><img src="images/wildlife/08.jpg" alt="Wildlife photograph 8 of 29" width="1600" height="1199" loading="lazy"></button><figcaption><span>Wildlife — 08</span><span class="no">08</span></figcaption></figure>
-<figure class="fig reveal"><button data-src="images/wildlife/09.jpg" data-cap="Wildlife — 09" data-cnt="09 / 29" data-alt="Wildlife photograph 9 of 29" aria-label="Open wildlife photograph 9 of 29"><img src="images/wildlife/09.jpg" alt="Wildlife photograph 9 of 29" width="1600" height="1067" loading="lazy"></button><figcaption><span>Wildlife — 09</span><span class="no">09</span></figcaption></figure>
-<figure class="fig reveal"><button data-src="images/wildlife/10.jpg" data-cap="Wildlife — 10" data-cnt="10 / 29" data-alt="Wildlife photograph 10 of 29" aria-label="Open wildlife photograph 10 of 29"><img src="images/wildlife/10.jpg" alt="Wildlife photograph 10 of 29" width="1600" height="1600" loading="lazy"></button><figcaption><span>Wildlife — 10</span><span class="no">10</span></figcaption></figure>
-<figure class="fig reveal"><button data-src="images/wildlife/11.jpg" data-cap="Wildlife — 11" data-cnt="11 / 29" data-alt="Wildlife photograph 11 of 29" aria-label="Open wildlife photograph 11 of 29"><img src="images/wildlife/11.jpg" alt="Wildlife photograph 11 of 29" width="1200" height="1600" loading="lazy"></button><figcaption><span>Wildlife — 11</span><span class="no">11</span></figcaption></figure>
-<figure class="fig reveal"><button data-src="images/wildlife/12.jpg" data-cap="Wildlife — 12" data-cnt="12 / 29" data-alt="Wildlife photograph 12 of 29" aria-label="Open wildlife photograph 12 of 29"><img src="images/wildlife/12.jpg" alt="Wildlife photograph 12 of 29" width="1200" height="1600" loading="lazy"></button><figcaption><span>Wildlife — 12</span><span class="no">12</span></figcaption></figure>
-<figure class="fig reveal"><button data-src="images/wildlife/13.jpg" data-cap="Wildlife — 13" data-cnt="13 / 29" data-alt="Wildlife photograph 13 of 29" aria-label="Open wildlife photograph 13 of 29"><img src="images/wildlife/13.jpg" alt="Wildlife photograph 13 of 29" width="1600" height="1600" loading="lazy"></button><figcaption><span>Wildlife — 13</span><span class="no">13</span></figcaption></figure>
-<figure class="fig reveal"><button data-src="images/wildlife/14.jpg" data-cap="Wildlife — 14" data-cnt="14 / 29" data-alt="Wildlife photograph 14 of 29" aria-label="Open wildlife photograph 14 of 29"><img src="images/wildlife/14.jpg" alt="Wildlife photograph 14 of 29" width="1600" height="1201" loading="lazy"></button><figcaption><span>Wildlife — 14</span><span class="no">14</span></figcaption></figure>
-<figure class="fig reveal"><button data-src="images/wildlife/15.jpg" data-cap="Wildlife — 15" data-cnt="15 / 29" data-alt="Wildlife photograph 15 of 29" aria-label="Open wildlife photograph 15 of 29"><img src="images/wildlife/15.jpg" alt="Wildlife photograph 15 of 29" width="1600" height="1201" loading="lazy"></button><figcaption><span>Wildlife — 15</span><span class="no">15</span></figcaption></figure>
-<figure class="fig reveal"><button data-src="images/wildlife/16.jpg" data-cap="Wildlife — 16" data-cnt="16 / 29" data-alt="Wildlife photograph 16 of 29" aria-label="Open wildlife photograph 16 of 29"><img src="images/wildlife/16.jpg" alt="Wildlife photograph 16 of 29" width="1600" height="1600" loading="lazy"></button><figcaption><span>Wildlife — 16</span><span class="no">16</span></figcaption></figure>
-<figure class="fig reveal"><button data-src="images/wildlife/17.jpg" data-cap="Wildlife — 17" data-cnt="17 / 29" data-alt="Wildlife photograph 17 of 29" aria-label="Open wildlife photograph 17 of 29"><img src="images/wildlife/17.jpg" alt="Wildlife photograph 17 of 29" width="1200" height="1600" loading="lazy"></button><figcaption><span>Wildlife — 17</span><span class="no">17</span></figcaption></figure>
-<figure class="fig reveal"><button data-src="images/wildlife/18.jpg" data-cap="Wildlife — 18" data-cnt="18 / 29" data-alt="Wildlife photograph 18 of 29" aria-label="Open wildlife photograph 18 of 29"><img src="images/wildlife/18.jpg" alt="Wildlife photograph 18 of 29" width="1200" height="1600" loading="lazy"></button><figcaption><span>Wildlife — 18</span><span class="no">18</span></figcaption></figure>
-<figure class="fig reveal"><button data-src="images/wildlife/19.jpg" data-cap="Wildlife — 19" data-cnt="19 / 29" data-alt="Wildlife photograph 19 of 29" aria-label="Open wildlife photograph 19 of 29"><img src="images/wildlife/19.jpg" alt="Wildlife photograph 19 of 29" width="1600" height="900" loading="lazy"></button><figcaption><span>Wildlife — 19</span><span class="no">19</span></figcaption></figure>
-<figure class="fig reveal"><button data-src="images/wildlife/20.jpg" data-cap="Wildlife — 20" data-cnt="20 / 29" data-alt="Wildlife photograph 20 of 29" aria-label="Open wildlife photograph 20 of 29"><img src="images/wildlife/20.jpg" alt="Wildlife photograph 20 of 29" width="1600" height="1200" loading="lazy"></button><figcaption><span>Wildlife — 20</span><span class="no">20</span></figcaption></figure>
-<figure class="fig reveal"><button data-src="images/wildlife/21.jpg" data-cap="Wildlife — 21" data-cnt="21 / 29" data-alt="Wildlife photograph 21 of 29" aria-label="Open wildlife photograph 21 of 29"><img src="images/wildlife/21.jpg" alt="Wildlife photograph 21 of 29" width="1600" height="900" loading="lazy"></button><figcaption><span>Wildlife — 21</span><span class="no">21</span></figcaption></figure>
-<figure class="fig reveal"><button data-src="images/wildlife/22.jpg" data-cap="Wildlife — 22" data-cnt="22 / 29" data-alt="Wildlife photograph 22 of 29" aria-label="Open wildlife photograph 22 of 29"><img src="images/wildlife/22.jpg" alt="Wildlife photograph 22 of 29" width="1600" height="1200" loading="lazy"></button><figcaption><span>Wildlife — 22</span><span class="no">22</span></figcaption></figure>
-<figure class="fig reveal"><button data-src="images/wildlife/23.jpg" data-cap="Wildlife — 23" data-cnt="23 / 29" data-alt="Wildlife photograph 23 of 29" aria-label="Open wildlife photograph 23 of 29"><img src="images/wildlife/23.jpg" alt="Wildlife photograph 23 of 29" width="1600" height="900" loading="lazy"></button><figcaption><span>Wildlife — 23</span><span class="no">23</span></figcaption></figure>
-<figure class="fig reveal"><button data-src="images/wildlife/24.jpg" data-cap="Camel" data-cnt="24 / 29" data-alt="Camel — wildlife photograph" aria-label="Open wildlife photograph 24 of 29"><img src="images/wildlife/24.jpg" alt="Camel — wildlife photograph" width="1581" height="853" loading="lazy"></button><figcaption><span>Camel</span><span class="no">24</span></figcaption></figure>
-<figure class="fig reveal"><button data-src="images/wildlife/25.jpg" data-cap="Crane" data-cnt="25 / 29" data-alt="Crane — wildlife photograph" aria-label="Open wildlife photograph 25 of 29"><img src="images/wildlife/25.jpg" alt="Crane — wildlife photograph" width="1562" height="781" loading="lazy"></button><figcaption><span>Crane</span><span class="no">25</span></figcaption></figure>
-<figure class="fig reveal"><button data-src="images/wildlife/26.jpg" data-cap="Grasshopper" data-cnt="26 / 29" data-alt="Grasshopper — wildlife photograph" aria-label="Open wildlife photograph 26 of 29"><img src="images/wildlife/26.jpg" alt="Grasshopper — wildlife photograph" width="1387" height="784" loading="lazy"></button><figcaption><span>Grasshopper</span><span class="no">26</span></figcaption></figure>
-<figure class="fig reveal"><button data-src="images/wildlife/27.jpg" data-cap="Naara 1" data-cnt="27 / 29" data-alt="Naara 1 — wildlife photograph" aria-label="Open wildlife photograph 27 of 29"><img src="images/wildlife/27.jpg" alt="Naara 1 — wildlife photograph" width="1179" height="1600" loading="lazy"></button><figcaption><span>Naara 1</span><span class="no">27</span></figcaption></figure>
-<figure class="fig reveal"><button data-src="images/wildlife/28.jpg" data-cap="Naara 2" data-cnt="28 / 29" data-alt="Naara 2 — wildlife photograph" aria-label="Open wildlife photograph 28 of 29"><img src="images/wildlife/28.jpg" alt="Naara 2 — wildlife photograph" width="1578" height="1106" loading="lazy"></button><figcaption><span>Naara 2</span><span class="no">28</span></figcaption></figure>
-<figure class="fig reveal"><button data-src="images/wildlife/29.jpg" data-cap="Special Naara" data-cnt="29 / 29" data-alt="Special Naara — wildlife photograph" aria-label="Open wildlife photograph 29 of 29"><img src="images/wildlife/29.jpg" alt="Special Naara — wildlife photograph" width="1388" height="1116" loading="lazy"></button><figcaption><span>Special Naara</span><span class="no">29</span></figcaption></figure>
-</div>
-</section>
-<section class="itl" data-screen-label="Interlude"><img data-plx src="images/architecture/12.jpg" alt="Jal Mahal palace half-sunk in Lake Man Sagar" loading="lazy"><div class="shade"></div><div class="itlcap reveal"><span class="rule r24"></span><p>Jal Mahal, Jaipur</p></div></section>
-<section id="fashion" class="cat" data-screen-label="Fashion">
-<div class="swatch reveal wipe" style="background:#464A32"><h2>Fashion</h2><span class="rule r26"></span><p class="idx">N° 05 — 10 images</p></div>
-<div class="grid">
-<figure class="fig reveal"><button data-src="images/fashion/01.jpg" data-cap="Fashion — 01" data-cnt="01 / 10" data-alt="Fashion photograph 1 of 10" aria-label="Open fashion photograph 1 of 10"><img src="images/fashion/01.jpg" alt="Fashion photograph 1 of 10" width="1600" height="900" loading="lazy"></button><figcaption><span>Fashion — 01</span><span class="no">01</span></figcaption></figure>
-<figure class="fig reveal"><button data-src="images/fashion/02.jpg" data-cap="Fashion — 02" data-cnt="02 / 10" data-alt="Fashion photograph 2 of 10" aria-label="Open fashion photograph 2 of 10"><img src="images/fashion/02.jpg" alt="Fashion photograph 2 of 10" width="1066" height="1600" loading="lazy"></button><figcaption><span>Fashion — 02</span><span class="no">02</span></figcaption></figure>
-<figure class="fig reveal"><button data-src="images/fashion/03.jpg" data-cap="Fashion — 03" data-cnt="03 / 10" data-alt="Fashion photograph 3 of 10" aria-label="Open fashion photograph 3 of 10"><img src="images/fashion/03.jpg" alt="Fashion photograph 3 of 10" width="900" height="1600" loading="lazy"></button><figcaption><span>Fashion — 03</span><span class="no">03</span></figcaption></figure>
-<figure class="fig reveal"><button data-src="images/fashion/04.jpg" data-cap="Fashion — 04" data-cnt="04 / 10" data-alt="Fashion photograph 4 of 10" aria-label="Open fashion photograph 4 of 10"><img src="images/fashion/04.jpg" alt="Fashion photograph 4 of 10" width="1200" height="1600" loading="lazy"></button><figcaption><span>Fashion — 04</span><span class="no">04</span></figcaption></figure>
-<figure class="fig reveal"><button data-src="images/fashion/05.jpg" data-cap="Fashion — 05" data-cnt="05 / 10" data-alt="Fashion photograph 5 of 10" aria-label="Open fashion photograph 5 of 10"><img src="images/fashion/05.jpg" alt="Fashion photograph 5 of 10" width="1200" height="1600" loading="lazy"></button><figcaption><span>Fashion — 05</span><span class="no">05</span></figcaption></figure>
-<figure class="fig reveal"><button data-src="images/fashion/06.jpg" data-cap="Fashion — 06" data-cnt="06 / 10" data-alt="Fashion photograph 6 of 10" aria-label="Open fashion photograph 6 of 10"><img src="images/fashion/06.jpg" alt="Fashion photograph 6 of 10" width="1200" height="1600" loading="lazy"></button><figcaption><span>Fashion — 06</span><span class="no">06</span></figcaption></figure>
-<figure class="fig reveal"><button data-src="images/fashion/07.jpg" data-cap="Fashion — 07" data-cnt="07 / 10" data-alt="Fashion photograph 7 of 10" aria-label="Open fashion photograph 7 of 10"><img src="images/fashion/07.jpg" alt="Fashion photograph 7 of 10" width="864" height="1184" loading="lazy"></button><figcaption><span>Fashion — 07</span><span class="no">07</span></figcaption></figure>
-<figure class="fig reveal"><button data-src="images/fashion/08.jpg" data-cap="Fashion — 08" data-cnt="08 / 10" data-alt="Fashion photograph 8 of 10" aria-label="Open fashion photograph 8 of 10"><img src="images/fashion/08.jpg" alt="Fashion photograph 8 of 10" width="1200" height="1600" loading="lazy"></button><figcaption><span>Fashion — 08</span><span class="no">08</span></figcaption></figure>
-<figure class="fig reveal"><button data-src="images/fashion/09.jpg" data-cap="Girl 2" data-cnt="09 / 10" data-alt="Girl 2 — fashion photograph" aria-label="Open fashion photograph 9 of 10"><img src="images/fashion/09.jpg" alt="Girl 2 — fashion photograph" width="1128" height="1390" loading="lazy"></button><figcaption><span>Girl 2</span><span class="no">09</span></figcaption></figure>
-<figure class="fig reveal"><button data-src="images/fashion/10.jpg" data-cap="Girl" data-cnt="10 / 10" data-alt="Girl — fashion photograph" aria-label="Open fashion photograph 10 of 10"><img src="images/fashion/10.jpg" alt="Girl — fashion photograph" width="1081" height="1440" loading="lazy"></button><figcaption><span>Girl</span><span class="no">10</span></figcaption></figure>
-</div>
-</section>
-<section id="event" class="cat" data-screen-label="Event">
-<div class="swatch reveal wipe" style="background:#384549"><h2>Event</h2><span class="rule r26"></span><p class="idx">N° 06 — 5 images</p></div>
-<div class="grid">
-<figure class="fig reveal"><button data-src="images/event/01.jpg" data-cap="Event — 01" data-cnt="01 / 05" data-alt="Event photograph 1 of 5" aria-label="Open event photograph 1 of 5"><img src="images/event/01.jpg" alt="Event photograph 1 of 5" width="1067" height="1600" loading="lazy"></button><figcaption><span>Event — 01</span><span class="no">01</span></figcaption></figure>
-<figure class="fig reveal"><button data-src="images/event/02.jpg" data-cap="Dancers" data-cnt="02 / 05" data-alt="Dancers — event photograph" aria-label="Open event photograph 2 of 5"><img src="images/event/02.jpg" alt="Dancers — event photograph" width="1600" height="900" loading="lazy"></button><figcaption><span>Dancers</span><span class="no">02</span></figcaption></figure>
-<figure class="fig reveal"><button data-src="images/event/03.jpg" data-cap="Kantara Dance Couple 1" data-cnt="03 / 05" data-alt="Kantara Dance Couple 1 — event photograph" aria-label="Open event photograph 3 of 5"><img src="images/event/03.jpg" alt="Kantara Dance Couple 1 — event photograph" width="1600" height="900" loading="lazy"></button><figcaption><span>Kantara Dance Couple 1</span><span class="no">03</span></figcaption></figure>
-<figure class="fig reveal"><button data-src="images/event/04.jpg" data-cap="Kathak" data-cnt="04 / 05" data-alt="Kathak — event photograph" aria-label="Open event photograph 4 of 5"><img src="images/event/04.jpg" alt="Kathak — event photograph" width="1280" height="1600" loading="lazy"></button><figcaption><span>Kathak</span><span class="no">04</span></figcaption></figure>
-<figure class="fig reveal"><button data-src="images/event/05.jpg" data-cap="Mudra Dancer" data-cnt="05 / 05" data-alt="Mudra Dancer — event photograph" aria-label="Open event photograph 5 of 5"><img src="images/event/05.jpg" alt="Mudra Dancer — event photograph" width="1287" height="809" loading="lazy"></button><figcaption><span>Mudra Dancer</span><span class="no">05</span></figcaption></figure>
-</div>
-</section>
-<section id="food" class="cat" data-screen-label="Food">
-<div class="swatch reveal wipe" style="background:#464A32"><h2>Food</h2><span class="rule r26"></span><p class="idx">N° 07 — 8 images</p></div>
-<div class="grid">
-<figure class="fig reveal"><button data-src="images/food/01.jpg" data-cap="Food — 01" data-cnt="01 / 08" data-alt="Food photograph 1 of 8" aria-label="Open food photograph 1 of 8"><img src="images/food/01.jpg" alt="Food photograph 1 of 8" width="1440" height="1080" loading="lazy"></button><figcaption><span>Food — 01</span><span class="no">01</span></figcaption></figure>
-<figure class="fig reveal"><button data-src="images/food/02.jpg" data-cap="Food — 02" data-cnt="02 / 08" data-alt="Food photograph 2 of 8" aria-label="Open food photograph 2 of 8"><img src="images/food/02.jpg" alt="Food photograph 2 of 8" width="900" height="1600" loading="lazy"></button><figcaption><span>Food — 02</span><span class="no">02</span></figcaption></figure>
-<figure class="fig reveal"><button data-src="images/food/03.jpg" data-cap="Food — 03" data-cnt="03 / 08" data-alt="Food photograph 3 of 8" aria-label="Open food photograph 3 of 8"><img src="images/food/03.jpg" alt="Food photograph 3 of 8" width="1600" height="1600" loading="lazy"></button><figcaption><span>Food — 03</span><span class="no">03</span></figcaption></figure>
-<figure class="fig reveal"><button data-src="images/food/04.jpg" data-cap="Food — 04" data-cnt="04 / 08" data-alt="Food photograph 4 of 8" aria-label="Open food photograph 4 of 8"><img src="images/food/04.jpg" alt="Food photograph 4 of 8" width="1600" height="1200" loading="lazy"></button><figcaption><span>Food — 04</span><span class="no">04</span></figcaption></figure>
-<figure class="fig reveal"><button data-src="images/food/05.jpg" data-cap="Food — 05" data-cnt="05 / 08" data-alt="Food photograph 5 of 8" aria-label="Open food photograph 5 of 8"><img src="images/food/05.jpg" alt="Food photograph 5 of 8" width="1208" height="1600" loading="lazy"></button><figcaption><span>Food — 05</span><span class="no">05</span></figcaption></figure>
-<figure class="fig reveal"><button data-src="images/food/06.jpg" data-cap="Food — 06" data-cnt="06 / 08" data-alt="Food photograph 6 of 8" aria-label="Open food photograph 6 of 8"><img src="images/food/06.jpg" alt="Food photograph 6 of 8" width="1600" height="900" loading="lazy"></button><figcaption><span>Food — 06</span><span class="no">06</span></figcaption></figure>
-<figure class="fig reveal"><button data-src="images/food/07.jpg" data-cap="Noodles" data-cnt="07 / 08" data-alt="Noodles — food photograph" aria-label="Open food photograph 7 of 8"><img src="images/food/07.jpg" alt="Noodles — food photograph" width="1600" height="1200" loading="lazy"></button><figcaption><span>Noodles</span><span class="no">07</span></figcaption></figure>
-<figure class="fig reveal"><button data-src="images/food/08.jpg" data-cap="Tikka" data-cnt="08 / 08" data-alt="Tikka — food photograph" aria-label="Open food photograph 8 of 8"><img src="images/food/08.jpg" alt="Tikka — food photograph" width="1600" height="1600" loading="lazy"></button><figcaption><span>Tikka</span><span class="no">08</span></figcaption></figure>
-</div>
-</section>
-<section class="itl" data-screen-label="Interlude"><img data-plx src="images/wildlife/25.jpg" alt="A crane gliding low over open country" loading="lazy"><div class="shade"></div><div class="itlcap reveal"><span class="rule r24"></span><p>Open country</p></div></section>
-<section id="product" class="cat" data-screen-label="Product">
-<div class="swatch reveal wipe" style="background:#384549"><h2>Product</h2><span class="rule r26"></span><p class="idx">N° 08 — 12 images</p></div>
-<div class="grid">
-<figure class="fig reveal"><button data-src="images/product/01.jpg" data-cap="Product — 01" data-cnt="01 / 12" data-alt="Product photograph 1 of 12" aria-label="Open product photograph 1 of 12"><img src="images/product/01.jpg" alt="Product photograph 1 of 12" width="1064" height="1600" loading="lazy"></button><figcaption><span>Product — 01</span><span class="no">01</span></figcaption></figure>
-<figure class="fig reveal"><button data-src="images/product/02.jpg" data-cap="Product — 02" data-cnt="02 / 12" data-alt="Product photograph 2 of 12" aria-label="Open product photograph 2 of 12"><img src="images/product/02.jpg" alt="Product photograph 2 of 12" width="1055" height="1579" loading="lazy"></button><figcaption><span>Product — 02</span><span class="no">02</span></figcaption></figure>
-<figure class="fig reveal"><button data-src="images/product/03.jpg" data-cap="Product — 03" data-cnt="03 / 12" data-alt="Product photograph 3 of 12" aria-label="Open product photograph 3 of 12"><img src="images/product/03.jpg" alt="Product photograph 3 of 12" width="1042" height="1559" loading="lazy"></button><figcaption><span>Product — 03</span><span class="no">03</span></figcaption></figure>
-<figure class="fig reveal"><button data-src="images/product/04.jpg" data-cap="Product — 04" data-cnt="04 / 12" data-alt="Product photograph 4 of 12" aria-label="Open product photograph 4 of 12"><img src="images/product/04.jpg" alt="Product photograph 4 of 12" width="1600" height="1067" loading="lazy"></button><figcaption><span>Product — 04</span><span class="no">04</span></figcaption></figure>
-<figure class="fig reveal"><button data-src="images/product/05.jpg" data-cap="Product — 05" data-cnt="05 / 12" data-alt="Product photograph 5 of 12" aria-label="Open product photograph 5 of 12"><img src="images/product/05.jpg" alt="Product photograph 5 of 12" width="1600" height="1067" loading="lazy"></button><figcaption><span>Product — 05</span><span class="no">05</span></figcaption></figure>
-<figure class="fig reveal"><button data-src="images/product/06.jpg" data-cap="Product — 06" data-cnt="06 / 12" data-alt="Product photograph 6 of 12" aria-label="Open product photograph 6 of 12"><img src="images/product/06.jpg" alt="Product photograph 6 of 12" width="900" height="1600" loading="lazy"></button><figcaption><span>Product — 06</span><span class="no">06</span></figcaption></figure>
-<figure class="fig reveal"><button data-src="images/product/07.jpg" data-cap="Product — 07" data-cnt="07 / 12" data-alt="Product photograph 7 of 12" aria-label="Open product photograph 7 of 12"><img src="images/product/07.jpg" alt="Product photograph 7 of 12" width="1440" height="1080" loading="lazy"></button><figcaption><span>Product — 07</span><span class="no">07</span></figcaption></figure>
-<figure class="fig reveal"><button data-src="images/product/08.jpg" data-cap="Product — 08" data-cnt="08 / 12" data-alt="Product photograph 8 of 12" aria-label="Open product photograph 8 of 12"><img src="images/product/08.jpg" alt="Product photograph 8 of 12" width="1080" height="1350" loading="lazy"></button><figcaption><span>Product — 08</span><span class="no">08</span></figcaption></figure>
-<figure class="fig reveal"><button data-src="images/product/09.jpg" data-cap="Product — 09" data-cnt="09 / 12" data-alt="Product photograph 9 of 12" aria-label="Open product photograph 9 of 12"><img src="images/product/09.jpg" alt="Product photograph 9 of 12" width="1600" height="1091" loading="lazy"></button><figcaption><span>Product — 09</span><span class="no">09</span></figcaption></figure>
-<figure class="fig reveal"><button data-src="images/product/10.jpg" data-cap="Product — 10" data-cnt="10 / 12" data-alt="Product photograph 10 of 12" aria-label="Open product photograph 10 of 12"><img src="images/product/10.jpg" alt="Product photograph 10 of 12" width="962" height="1306" loading="lazy"></button><figcaption><span>Product — 10</span><span class="no">10</span></figcaption></figure>
-<figure class="fig reveal"><button data-src="images/product/11.jpg" data-cap="Product — 11" data-cnt="11 / 12" data-alt="Product photograph 11 of 12" aria-label="Open product photograph 11 of 12"><img src="images/product/11.jpg" alt="Product photograph 11 of 12" width="1600" height="1216" loading="lazy"></button><figcaption><span>Product — 11</span><span class="no">11</span></figcaption></figure>
-<figure class="fig reveal"><button data-src="images/product/12.jpg" data-cap="Product — 12" data-cnt="12 / 12" data-alt="Product photograph 12 of 12" aria-label="Open product photograph 12 of 12"><img src="images/product/12.jpg" alt="Product photograph 12 of 12" width="1068" height="1600" loading="lazy"></button><figcaption><span>Product — 12</span><span class="no">12</span></figcaption></figure>
-</div>
-</section>
-</div>
-<section id="contact" class="wrap contact" data-screen-label="Contact"><div class="reveal"><p class="kicker">Contact</p><h2>Commissions, prints &amp; collaborations.</h2><div><div class="row"><span class="k">Email</span><a class="u" href="mailto:ronaldjefferson007@gmail.com">ronaldjefferson007@gmail.com</a></div><div class="row"><span class="k">Phone</span><a class="u" href="tel:+916379542485">+91 63795 42485</a></div><div class="row"><span class="k">City</span><span class="v">Bengaluru, India</span></div><div class="row"><span class="k">Instagram</span><a class="u" href="https://instagram.com/DSC001" target="_blank" rel="noopener">@DSC001</a></div></div></div><form id="cform" class="reveal"><div><label for="f-name">Name</label><input class="input" id="f-name" name="name" type="text" required autocomplete="name"></div><div><label for="f-email">Email</label><input class="input" id="f-email" name="email" type="email" required autocomplete="email"></div><div><label for="f-msg">Message</label><textarea class="input" id="f-msg" name="message" rows="4" required></textarea></div><button class="send" type="submit">Send Message</button></form></section>
+
+<div id="grain" aria-hidden="true"></div>
+
+<!-- Nav -->
+<header class="site-nav">
+  <div class="nav-inner">
+    <a href="#top" class="nav-mark">Ronald Jefferson<span class="dot">.</span></a>
+    <nav class="nav-links" aria-label="Primary">
+      <a href="#about">About</a>
+      <a href="#landscape">Work</a>
+      <a href="#contact">Contact</a>
+    </nav>
+    <button class="nav-burger" aria-label="Toggle menu" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</header>
+
+<!-- Mobile fullscreen menu -->
+<nav class="mobile-menu" aria-label="Mobile">
+  <ol>
+    <li><span class="num">01</span><a href="#about">About</a></li>
+    <li><span class="num">02</span><a href="#landscape">Landscape</a></li>
+    <li><span class="num">03</span><a href="#architecture">Architecture</a></li>
+    <li><span class="num">04</span><a href="#portrait">Portrait</a></li>
+    <li><span class="num">05</span><a href="#wildlife">Wildlife</a></li>
+    <li><span class="num">06</span><a href="#fashion">Fashion</a></li>
+    <li><span class="num">07</span><a href="#event">Event</a></li>
+    <li><span class="num">08</span><a href="#food">Food</a></li>
+    <li><span class="num">09</span><a href="#product">Product</a></li>
+    <li><span class="num">10</span><a href="#contact">Contact</a></li>
+  </ol>
+</nav>
+
+<main id="top">
+
+  <!-- Hero / About — the opening statement, cinematic backdrop + editorial intro -->
+  <section class="hero" id="about">
+    <div class="hero-media">
+      <img src="images/hero.jpg" alt="Featured photograph by Ronald Jefferson">
+    </div>
+    <div class="hero-content">
+      <div class="hero-portrait pw" data-speed="0.06">
+        <div class="hero-portrait-frame reveal-scale">
+          <img src="images/profile.jpg" alt="Portrait of Ronald Jefferson">
+        </div>
+      </div>
+      <div class="hero-copy pw" data-speed="-0.04">
+        <span class="eyebrow reveal">Photographer &mdash; Goa, India</span>
+        <div class="hero-title-wrap">
+          <h1 class="hero-title">Ronald<br>Jefferson</h1>
+        </div>
+        <p class="hero-statement reveal">A quiet way of looking.</p>
+        <svg class="sketch reveal" viewBox="0 0 220 20" width="200" height="20" aria-hidden="true"><path d="M3 12 Q 40 2 80 11 T 160 9 T 217 13"/></svg>
+        <p class="hero-sub reveal">Ronald has spent the last decade photographing places, people and objects that reward attention &mdash; the kind that only shows itself after you've stood still for a while. The work moves across eight disciplines; the instinct behind it stays the same.</p>
+        <div class="hero-tags reveal">
+          <span>Landscape</span><span>Architecture</span><span>Portrait</span><span>Wildlife</span>
+          <span>Fashion</span><span>Event</span><span>Food</span><span>Product</span>
+        </div>
+      </div>
+    </div>
+    <div class="scroll-cue"><span>Scroll</span><span class="track"></span></div>
+  </section>
+
+  <!-- Category index — a curved, draggable ribbon of covers (one per discipline).
+       Drag or scroll horizontally; click the centered cover to jump to that chapter. -->
+  <section class="index-ribbon" aria-label="Browse photography categories">
+    <div class="ribbon-stage">
+      <div class="ribbon-viewport" id="ribbon-viewport" tabindex="0">
+        <div class="ribbon-track" id="ribbon-track"></div>
+      </div>
+      <div class="ribbon-label" id="ribbon-label" aria-hidden="true"></div>
+    </div>
+    <div class="ribbon-crumbs" id="ribbon-crumbs"></div>
+  </section>
+
+  <!-- Curtain — a single wipe transition into the work itself -->
+  <section class="curtain">
+    <div class="curtain-panel"></div>
+    <h2 class="curtain-text reveal-mask"><span>The Work</span></h2>
+  </section>
+
+  <!-- Galleries injected by JS: chapter header + filmstrip gallery + interlude, per category -->
+  <div id="galleries"></div>
+
+  <!-- Contact -->
+  <section class="contact" id="contact">
+    <h2 class="contact-title reveal-mask pw" data-speed="0.06"><span>Let&rsquo;s create<br>something<br>memorable.</span></h2>
+    <div class="contact-grid">
+      <div class="pw" data-speed="0.05">
+        <div class="contact-info reveal">
+          <dl>
+            <dt>Email</dt><dd><a href="mailto:ronaldjefferson007@gmail.com">ronaldjefferson007@gmail.com</a></dd>
+            <dt>Location</dt><dd>Goa, India</dd>
+            <dt>Instagram</dt><dd><a href="https://instagram.com" target="_blank" rel="noopener">@ronaldjefferson</a></dd>
+          </dl>
+        </div>
+      </div>
+      <div class="pw" data-speed="-0.05">
+      <form id="contact-form" class="reveal" novalidate>
+        <div class="field">
+          <input type="text" id="cf-name" name="name" placeholder=" " required>
+          <label for="cf-name">Name</label>
+        </div>
+        <div class="field">
+          <input type="email" id="cf-email" name="email" placeholder=" " required>
+          <label for="cf-email">Email</label>
+        </div>
+        <div class="field">
+          <textarea id="cf-message" name="message" placeholder=" " rows="3" required></textarea>
+          <label for="cf-message">Tell me about your project</label>
+        </div>
+        <button type="submit" class="btn-send"><span>Send message</span><span class="arrow">&rarr;</span></button>
+        <p class="form-note">This form is a front-end demo &mdash; connect it to your mail service or booking backend to go live.</p>
+      </form>
+      </div>
+    </div>
+  </section>
+
 </main>
-<footer><div class="finner"><nav class="fnav" aria-label="Footer"><a href="#about">About</a><a href="#landscape">Work</a><a href="#contact">Contact</a><a href="https://instagram.com/DSC001" target="_blank" rel="noopener">Instagram</a></nav><div class="fmeta"><span>© 2026 Ronald Jefferson</span><span>All photographs © Ronald Jefferson</span></div></div></footer>
-<div id="menu" role="dialog" aria-modal="true" aria-label="Menu"><button id="mclose" aria-label="Close menu">✕</button><nav aria-label="Menu"><a href="#about"><span class="mno">01</span><span class="mlbl">About</span></a><a href="#landscape"><span class="mno">02</span><span class="mlbl">Landscape</span></a><a href="#architecture"><span class="mno">03</span><span class="mlbl">Architecture</span></a><a href="#portrait"><span class="mno">04</span><span class="mlbl">Portrait</span></a><a href="#wildlife"><span class="mno">05</span><span class="mlbl">Wildlife</span></a><a href="#fashion"><span class="mno">06</span><span class="mlbl">Fashion</span></a><a href="#event"><span class="mno">07</span><span class="mlbl">Event</span></a><a href="#food"><span class="mno">08</span><span class="mlbl">Food</span></a><a href="#product"><span class="mno">09</span><span class="mlbl">Product</span></a><a href="#contact"><span class="mno">10</span><span class="mlbl">Contact</span></a></nav></div>
-<div id="lb" role="dialog" aria-modal="true" aria-label="Image viewer"><img id="lbimg" src="" alt=""><div class="lbmeta"><span class="c" id="lbcap"></span><span class="n" id="lbcnt"></span></div><button class="lbbtn" id="lbprev" aria-label="Previous image">←</button><button class="lbbtn" id="lbnext" aria-label="Next image">→</button><button class="lbbtn" id="lbx" aria-label="Close">✕</button></div>
-<script>
-(function(){
-var RM=matchMedia('(prefers-reduced-motion: reduce)').matches;
-// --- header + parallax (rAF, clamped to the 12% oversize so no gaps) ---
-var hdr=document.getElementById('hdr'),tick=false;
-var plxEls=[].slice.call(document.querySelectorAll('[data-plx]'));
-function plx(){if(RM)return;var vh=innerHeight;plxEls.forEach(function(img){var w=img.parentElement.getBoundingClientRect();if(w.bottom<-80||w.top>vh+80)return;var prog=((w.top+w.height/2)-vh/2)/((vh+w.height)/2);var max=w.height*0.11;var y=-prog*max;if(y>max)y=max;if(y<-max)y=-max;img.style.transform='translate3d(0,'+y.toFixed(1)+'px,0)';});}
-function onScroll(){hdr.classList.toggle('solid',scrollY>80);if(!tick){tick=true;requestAnimationFrame(function(){tick=false;plx();});}}
-addEventListener('scroll',onScroll,{passive:true});addEventListener('resize',plx);onScroll();plx();
-// --- scroll reveals: once, 70ms stagger ---
-var els=[].slice.call(document.querySelectorAll('.reveal'));
-if(RM){els.forEach(function(e){e.classList.add('in');});}
-else{var io=new IntersectionObserver(function(es){var k=0;es.forEach(function(en){if(!en.isIntersecting)return;var el=en.target;el.style.transitionDelay=(k*70)+'ms';el.classList.add('in');io.unobserve(el);k++;setTimeout(function(){el.style.transitionDelay='';},900+k*70);});},{threshold:0.12});
-els.forEach(function(el){if(el.getBoundingClientRect().top<innerHeight*0.9){el.classList.add('now','in');}else io.observe(el);});}
-// --- scrollspy ---
-var spyMap={about:'n-about',contact:'n-contact'};
-var spy=new IntersectionObserver(function(es){es.forEach(function(en){if(!en.isIntersecting)return;var id=en.target.id;['n-about','n-work','n-contact'].forEach(function(n){document.getElementById(n).classList.remove('act');});var t=spyMap[id]||(en.target.classList.contains('cat')?'n-work':null);if(t)document.getElementById(t).classList.add('act');});},{rootMargin:'-45% 0px -50% 0px'});
-[].slice.call(document.querySelectorAll('section[id]')).forEach(function(s){spy.observe(s);});
-// --- overlay menu ---
-var menu=document.getElementById('menu');
-function closeMenu(){menu.classList.remove('open');}
-document.getElementById('burger').addEventListener('click',function(){menu.classList.add('open');var d=0;[].slice.call(menu.querySelectorAll('nav a')).forEach(function(a){a.style.animationDelay=(d+=55)-55+'ms';});});
-document.getElementById('mclose').addEventListener('click',closeMenu);
-[].slice.call(menu.querySelectorAll('nav a')).forEach(function(a){a.addEventListener('click',closeMenu);});
-// --- lightbox: click, arrows, keys, swipe, scroll lock ---
-var flat=[].slice.call(document.querySelectorAll('.fig button'));
-var lb=document.getElementById('lb'),lbImg=document.getElementById('lbimg'),lbCap=document.getElementById('lbcap'),lbCnt=document.getElementById('lbcnt'),cur=-1;
-function openLb(i){cur=i;var b=flat[i];lbImg.src=b.getAttribute('data-src');lbImg.alt=b.getAttribute('data-alt');lbCap.textContent=b.getAttribute('data-cap');lbCnt.textContent=b.getAttribute('data-cnt');lb.classList.add('open');document.body.style.overflow='hidden';}
-function closeLb(){lb.classList.remove('open');document.body.style.overflow='';cur=-1;}
-function step(d){openLb((cur+d+flat.length)%flat.length);}
-flat.forEach(function(b,i){b.addEventListener('click',function(){openLb(i);});});
-lb.addEventListener('click',function(e){if(e.target===lb)closeLb();});
-document.getElementById('lbprev').addEventListener('click',function(){step(-1);});
-document.getElementById('lbnext').addEventListener('click',function(){step(1);});
-document.getElementById('lbx').addEventListener('click',closeLb);
-addEventListener('keydown',function(e){if(cur>=0){if(e.key==='Escape')closeLb();else if(e.key==='ArrowLeft')step(-1);else if(e.key==='ArrowRight')step(1);}else if(menu.classList.contains('open')&&e.key==='Escape')closeMenu();});
-var tx=null;
-addEventListener('touchstart',function(e){if(cur>=0)tx=e.touches[0].clientX;},{passive:true});
-addEventListener('touchend',function(e){if(cur>=0&&tx!=null){var d=e.changedTouches[0].clientX-tx;if(Math.abs(d)>44)step(d<0?1:-1);tx=null;}},{passive:true});
-// --- contact form -> mail client ---
-document.getElementById('cform').addEventListener('submit',function(e){e.preventDefault();var el=this.elements;location.href='mailto:ronaldjefferson007@gmail.com?subject='+encodeURIComponent('Portfolio enquiry — '+el.name.value)+'&body='+encodeURIComponent(el.message.value+'\n\n— '+el.name.value+' ('+el.email.value+')');});
-})();
-</script>
+
+<footer>
+  <div class="footer-mark">Ronald Jefferson</div>
+  <div class="footer-links">
+    <a href="#about">About</a>
+    <a href="#landscape">Work</a>
+    <a href="#contact">Contact</a>
+    <a href="https://instagram.com" target="_blank" rel="noopener">Instagram</a>
+  </div>
+  <p class="footer-copy">&copy; 2026 Ronald Jefferson. All photographs are the property of the photographer and may not be reproduced without permission.</p>
+</footer>
+
+<!-- Lightbox -->
+<div class="lightbox" id="lightbox" role="dialog" aria-modal="true" aria-label="Photograph viewer">
+  <button class="lb-close" aria-label="Close"><span>Close</span> &times;</button>
+  <button class="lb-nav lb-prev" aria-label="Previous photograph">&larr;</button>
+  <div class="lb-figure">
+    <img src="" alt="">
+    <div class="lb-meta"><span class="lb-title"></span><span class="lb-count"></span></div>
+  </div>
+  <button class="lb-nav lb-next" aria-label="Next photograph">&rarr;</button>
+</div>
+
+<script src="js/main.js"></script>
 </body>
 </html>
