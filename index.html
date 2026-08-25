@@ -2,172 +2,252 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+<meta name="theme-color" content="#0a0b0a">
 <title>Ronald Jefferson — Photography</title>
-<meta name="description" content="Ronald Jefferson is a photographer working across landscape, architecture, portrait, wildlife, fashion, event, food and product photography. A quiet way of looking.">
+<meta name="description" content="Ronald Jefferson photographs landscape, architecture, portrait, wildlife, fashion, event, food and product. A quiet way of looking. Based in Goa, India.">
 <meta property="og:title" content="Ronald Jefferson — Photography">
-<meta property="og:description" content="A quiet way of looking. Landscape, architecture, portrait, wildlife, fashion, event, food and product photography.">
+<meta property="og:description" content="A quiet way of looking. Eight disciplines, one instinct.">
 <meta property="og:type" content="website">
 <meta property="og:image" content="images/hero.jpg">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="Ronald Jefferson — Photography">
 <meta name="twitter:description" content="A quiet way of looking.">
 <link rel="canonical" href="https://example.com/">
+
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;0,9..144,600;1,9..144,400;1,9..144,500&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,400;0,9..144,600;0,9..144,700;1,9..144,300;1,9..144,400&family=Inter:wght@400;500&display=swap" rel="stylesheet">
+<link rel="preload" as="image" href="images/hero.jpg" fetchpriority="high">
 <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
 
-<!-- Preloader -->
-<div id="preloader" aria-hidden="true">
-  <div class="pre-mark">Ronald Jefferson</div>
-  <div class="pre-line"></div>
+<!-- ── Loader: counts real decoded bytes of the first-screen assets ─────── -->
+<div id="loader" aria-hidden="true">
+  <div class="loader-inner">
+    <span class="loader-mark">Ronald Jefferson</span>
+    <span class="loader-num"><i id="loader-count">0</i><em>%</em></span>
+  </div>
+  <div class="loader-bar"><span id="loader-fill"></span></div>
 </div>
 
-<div id="grain" aria-hidden="true"></div>
+<!-- ── Atmosphere: film grain, safelight leak, edge vignette ───────────── -->
+<div class="atmos" aria-hidden="true">
+  <div class="atmos-grain"></div>
+  <div class="atmos-leak"></div>
+  <div class="atmos-vig"></div>
+</div>
 
-<!-- Nav -->
-<header class="site-nav">
-  <div class="nav-inner">
-    <a href="#top" class="nav-mark">Ronald Jefferson<span class="dot">.</span></a>
-    <nav class="nav-links" aria-label="Primary">
-      <a href="#about">About</a>
-      <a href="#landscape">Work</a>
-      <a href="#contact">Contact</a>
-    </nav>
-    <button class="nav-burger" aria-label="Toggle menu" aria-expanded="false">
-      <span></span><span></span><span></span>
-    </button>
-  </div>
+<a class="skip" href="#work">Skip to the photographs</a>
+
+<!-- ── Navigation ──────────────────────────────────────────────────────── -->
+<header class="nav" id="nav">
+  <a href="#about" class="nav-mark" data-scroll>
+    <span>Ronald Jefferson</span>
+  </a>
+  <nav class="nav-links" aria-label="Primary">
+    <a href="#about" data-scroll data-section="about"><i>01</i> About</a>
+    <a href="#work" data-scroll data-section="work"><i>02</i> Work</a>
+    <a href="#contact" data-scroll data-section="contact"><i>03</i> Contact</a>
+  </nav>
+  <button class="nav-burger" id="nav-burger" aria-label="Open menu" aria-expanded="false" aria-controls="menu">
+    <span></span><span></span>
+  </button>
 </header>
 
-<!-- Mobile fullscreen menu -->
-<nav class="mobile-menu" aria-label="Mobile">
-  <ol>
-    <li><span class="num">01</span><a href="#about">About</a></li>
-    <li><span class="num">02</span><a href="#landscape">Landscape</a></li>
-    <li><span class="num">03</span><a href="#architecture">Architecture</a></li>
-    <li><span class="num">04</span><a href="#portrait">Portrait</a></li>
-    <li><span class="num">05</span><a href="#wildlife">Wildlife</a></li>
-    <li><span class="num">06</span><a href="#fashion">Fashion</a></li>
-    <li><span class="num">07</span><a href="#event">Event</a></li>
-    <li><span class="num">08</span><a href="#food">Food</a></li>
-    <li><span class="num">09</span><a href="#product">Product</a></li>
-    <li><span class="num">10</span><a href="#contact">Contact</a></li>
-  </ol>
-</nav>
+<!-- ── Fullscreen menu (mobile + keyboard) ─────────────────────────────── -->
+<div class="menu" id="menu" hidden>
+  <nav aria-label="All sections">
+    <a href="#about" data-scroll><i>01</i>About</a>
+    <a href="#work" data-scroll><i>02</i>Work</a>
+    <a href="#contact" data-scroll><i>03</i>Contact</a>
+  </nav>
+  <div class="menu-cats">
+    <span class="label">Disciplines</span>
+    <ul id="menu-cats"></ul>
+  </div>
+</div>
 
-<main id="top">
+<main>
 
-  <!-- Hero / About — the opening statement, cinematic backdrop + editorial intro -->
-  <section class="hero" id="about">
-    <div class="hero-media">
-      <img src="images/hero.jpg" alt="Featured photograph by Ronald Jefferson">
+<!-- ══════════════════════════════════════════════════════════════════════
+     PAGE 1 — ABOUT
+     A single continuous sequence. Nothing is visible until the scroll
+     position that earns it.
+     ══════════════════════════════════════════════════════════════════════ -->
+<section class="about" id="about" aria-label="About Ronald Jefferson">
+
+  <!-- Act 1 — the name, built in depth: cards sit both behind and in front
+       of the type, so the layers actually interleave rather than stack. -->
+  <div class="hero" id="hero">
+    <div class="hero-bg" data-depth="0.10"><img src="images/hero.jpg" alt="" aria-hidden="true" fetchpriority="high"></div>
+
+    <div class="hero-cards" id="hero-cards" aria-hidden="true"></div>
+
+    <h1 class="hero-type">
+      <span class="ht ht-1"><span>Ronald</span></span>
+      <span class="ht ht-2"><span>Jefferson</span></span>
+      <span class="ht ht-3"><span>Photography</span></span>
+    </h1>
+
+    <p class="hero-meta">
+      <span>Goa, India</span>
+      <span class="hero-meta-dot">·</span>
+      <span>Est. 2016</span>
+      <span class="hero-meta-dot">·</span>
+      <span>117 frames</span>
+    </p>
+
+    <div class="cue" id="cue">
+      <span class="cue-word">Scroll</span>
+      <span class="cue-rail"><i></i></span>
     </div>
-    <div class="hero-content">
-      <div class="hero-portrait pw" data-speed="0.06">
-        <div class="hero-portrait-frame reveal-scale">
-          <img src="images/profile.jpg" alt="Portrait of Ronald Jefferson">
-        </div>
+  </div>
+
+  <!-- Act 2 — the statement. Pinned; the line assembles word by word and a
+       photograph opens behind it through a widening aperture. -->
+  <div class="act act-statement" data-act>
+    <div class="act-sticky">
+      <div class="aperture" data-depth="0.16">
+        <img data-src="images/thumb/landscape/05.jpg" alt="A long valley at first light">
       </div>
-      <div class="hero-copy pw" data-speed="-0.04">
-        <span class="eyebrow reveal">Photographer &mdash; Goa, India</span>
-        <div class="hero-title-wrap">
-          <h1 class="hero-title">Ronald<br>Jefferson</h1>
-        </div>
-        <p class="hero-statement reveal">A quiet way of looking.</p>
-        <svg class="sketch reveal" viewBox="0 0 220 20" width="200" height="20" aria-hidden="true"><path d="M3 12 Q 40 2 80 11 T 160 9 T 217 13"/></svg>
-        <p class="hero-sub reveal">Ronald has spent the last decade photographing places, people and objects that reward attention &mdash; the kind that only shows itself after you've stood still for a while. The work moves across eight disciplines; the instinct behind it stays the same.</p>
-        <div class="hero-tags reveal">
-          <span>Landscape</span><span>Architecture</span><span>Portrait</span><span>Wildlife</span>
-          <span>Fashion</span><span>Event</span><span>Food</span><span>Product</span>
-        </div>
-      </div>
+      <p class="statement" data-split>
+        I photograph what only shows itself
+        to someone willing to stand still.
+      </p>
     </div>
-    <div class="scroll-cue"><span>Scroll</span><span class="track"></span></div>
-  </section>
+  </div>
 
-  <!-- Category index — a curved, draggable ribbon of covers (one per discipline).
-       Drag or scroll horizontally; click the centered cover to jump to that chapter. -->
-  <section class="index-ribbon" aria-label="Browse photography categories">
-    <div class="ribbon-stage">
-      <div class="ribbon-viewport" id="ribbon-viewport" tabindex="0">
-        <div class="ribbon-track" id="ribbon-track"></div>
-      </div>
-      <div class="ribbon-label" id="ribbon-label" aria-hidden="true"></div>
-    </div>
-    <div class="ribbon-crumbs" id="ribbon-crumbs"></div>
-  </section>
-
-  <!-- Curtain — a single wipe transition into the work itself -->
-  <section class="curtain">
-    <div class="curtain-panel"></div>
-    <h2 class="curtain-text reveal-mask"><span>The Work</span></h2>
-  </section>
-
-  <!-- Galleries injected by JS: chapter header + filmstrip gallery + interlude, per category -->
-  <div id="galleries"></div>
-
-  <!-- Contact -->
-  <section class="contact" id="contact">
-    <h2 class="contact-title reveal-mask pw" data-speed="0.06"><span>Let&rsquo;s create<br>something<br>memorable.</span></h2>
-    <div class="contact-grid">
-      <div class="pw" data-speed="0.05">
-        <div class="contact-info reveal">
-          <dl>
-            <dt>Email</dt><dd><a href="mailto:ronaldjefferson007@gmail.com">ronaldjefferson007@gmail.com</a></dd>
-            <dt>Location</dt><dd>Goa, India</dd>
-            <dt>Instagram</dt><dd><a href="https://instagram.com" target="_blank" rel="noopener">@ronaldjefferson</a></dd>
-          </dl>
+  <!-- Act 3 — the portrait, annotated. The stroke draws itself in. -->
+  <div class="act act-portrait" data-act>
+    <div class="act-sticky">
+      <figure class="pf">
+        <div class="pf-frame" data-depth="0.07">
+          <img data-src="images/profile.jpg" alt="Ronald Jefferson, photographed in his studio">
         </div>
-      </div>
-      <div class="pw" data-speed="-0.05">
-      <form id="contact-form" class="reveal" novalidate>
-        <div class="field">
-          <input type="text" id="cf-name" name="name" placeholder=" " required>
-          <label for="cf-name">Name</label>
-        </div>
-        <div class="field">
-          <input type="email" id="cf-email" name="email" placeholder=" " required>
-          <label for="cf-email">Email</label>
-        </div>
-        <div class="field">
-          <textarea id="cf-message" name="message" placeholder=" " rows="3" required></textarea>
-          <label for="cf-message">Tell me about your project</label>
-        </div>
-        <button type="submit" class="btn-send"><span>Send message</span><span class="arrow">&rarr;</span></button>
-        <p class="form-note">This form is a front-end demo &mdash; connect it to your mail service or booking backend to go live.</p>
-      </form>
+        <figcaption class="pf-note">
+          <svg class="pf-stroke" viewBox="0 0 240 120" fill="none" aria-hidden="true">
+            <path d="M232 10 C 190 6, 150 22, 120 46 C 96 66, 74 86, 34 92" stroke-linecap="round"/>
+            <path d="M34 92 L 54 78 M34 92 L 50 104" stroke-linecap="round"/>
+          </svg>
+          <em>That’s him.</em>
+        </figcaption>
+      </figure>
+      <div class="pf-copy">
+        <p class="pf-lead" data-reveal>Ten years, eight disciplines, one instinct.</p>
+        <p class="pf-body" data-reveal>Ronald works between the Western Ghats and the Arabian Sea, and travels for the rest. Landscapes taught him to wait. Wildlife taught him to wait longer. Everything since — buildings, faces, food, objects — has been the same patience pointed somewhere new.</p>
       </div>
     </div>
-  </section>
+  </div>
+
+  <!-- Act 4 — the roll advances. Speed is tied to scroll velocity. -->
+  <div class="act act-marquee" data-act>
+    <div class="marquee" id="marquee" aria-hidden="true">
+      <div class="marquee-row" data-dir="1"><span></span></div>
+      <div class="marquee-row" data-dir="-1"><span></span></div>
+    </div>
+    <p class="marquee-cap" data-reveal>Every frame below was made on assignment or on foot. Nothing here is stock.</p>
+  </div>
+
+  <!-- Act 5 — the index of disciplines, which hands off to the roll. -->
+  <div class="act act-index" data-act>
+    <span class="label" data-reveal>The disciplines</span>
+    <ul class="index" id="index-list"></ul>
+  </div>
+</section>
+
+<!-- ══════════════════════════════════════════════════════════════════════
+     PAGE 2 — WORK
+     A 35mm roll turned on its side. Vertical scroll advances it
+     horizontally; the centre frame is the one you can open.
+     ══════════════════════════════════════════════════════════════════════ -->
+<section class="work" id="work" aria-label="Photography by category">
+  <div class="work-pin">
+
+    <div class="roll-title" id="roll-title" aria-hidden="true"></div>
+
+    <div class="roll" id="roll" role="listbox" aria-label="Categories" tabindex="0">
+      <div class="roll-track" id="roll-track"></div>
+    </div>
+
+    <div class="roll-foot">
+      <div class="roll-ticker" id="roll-ticker"></div>
+      <p class="roll-hint" id="roll-hint">Drag, scroll or use ← → · Open the centre frame</p>
+    </div>
+
+    <div class="roll-counter" id="roll-counter" aria-hidden="true"><i>01</i><em>/ 08</em></div>
+  </div>
+</section>
+
+<!-- ══════════════════════════════════════════════════════════════════════
+     PAGE 3 — CONTACT
+     ══════════════════════════════════════════════════════════════════════ -->
+<section class="contact" id="contact" aria-label="Contact">
+  <div class="contact-bg" data-depth="0.12"><img data-src="images/thumb/landscape/12.jpg" alt=""></div>
+
+  <div class="contact-inner">
+    <span class="label" data-reveal>The last frame</span>
+    <h2 class="contact-type" data-split>Let’s make something worth standing still for.</h2>
+
+    <div class="contact-rows">
+      <a class="crow" href="mailto:ronaldjefferson007@gmail.com" data-reveal data-magnetic>
+        <i>Email</i><span>ronaldjefferson007@gmail.com</span><b aria-hidden="true">→</b>
+      </a>
+      <a class="crow" href="https://instagram.com" target="_blank" rel="noopener" data-reveal data-magnetic>
+        <i>Instagram</i><span>@ronaldjefferson</span><b aria-hidden="true">→</b>
+      </a>
+      <div class="crow crow-static" data-reveal>
+        <i>Based in</i><span>Goa, India — available worldwide</span>
+      </div>
+    </div>
+
+    <a class="cta" href="mailto:ronaldjefferson007@gmail.com?subject=Commission%20enquiry" data-reveal data-magnetic>
+      <span class="cta-fill" aria-hidden="true"></span>
+      <span class="cta-label">Start a commission</span>
+    </a>
+  </div>
+
+  <footer class="foot">
+    <span>© 2026 Ronald Jefferson</span>
+    <span>All photographs are the photographer’s property.</span>
+  </footer>
+</section>
 
 </main>
 
-<footer>
-  <div class="footer-mark">Ronald Jefferson</div>
-  <div class="footer-links">
-    <a href="#about">About</a>
-    <a href="#landscape">Work</a>
-    <a href="#contact">Contact</a>
-    <a href="https://instagram.com" target="_blank" rel="noopener">Instagram</a>
+<!-- ── Category viewer: the roll unspools into a vertical reel ──────────── -->
+<div class="viewer" id="viewer" role="dialog" aria-modal="true" aria-labelledby="viewer-title" hidden>
+  <div class="viewer-head">
+    <button class="viewer-back" id="viewer-back">
+      <b aria-hidden="true">←</b><span>All work</span>
+    </button>
+    <h2 class="viewer-title" id="viewer-title"></h2>
+    <span class="viewer-count" id="viewer-count"></span>
   </div>
-  <p class="footer-copy">&copy; 2026 Ronald Jefferson. All photographs are the property of the photographer and may not be reproduced without permission.</p>
-</footer>
-
-<!-- Lightbox -->
-<div class="lightbox" id="lightbox" role="dialog" aria-modal="true" aria-label="Photograph viewer">
-  <button class="lb-close" aria-label="Close"><span>Close</span> &times;</button>
-  <button class="lb-nav lb-prev" aria-label="Previous photograph">&larr;</button>
-  <div class="lb-figure">
-    <img src="" alt="">
-    <div class="lb-meta"><span class="lb-title"></span><span class="lb-count"></span></div>
+  <div class="viewer-watermark" id="viewer-watermark" aria-hidden="true"></div>
+  <div class="viewer-scroll" id="viewer-scroll">
+    <div class="reel" id="reel"></div>
+    <div class="viewer-end">
+      <span class="label">End of reel</span>
+      <button class="viewer-next" id="viewer-next"></button>
+    </div>
   </div>
-  <button class="lb-nav lb-next" aria-label="Next photograph">&rarr;</button>
+  <div class="viewer-progress" id="viewer-progress" aria-hidden="true"><i></i></div>
 </div>
 
+<!-- ── Lightbox ────────────────────────────────────────────────────────── -->
+<div class="lb" id="lb" role="dialog" aria-modal="true" aria-label="Photograph" hidden>
+  <button class="lb-close" id="lb-close" aria-label="Close photograph">✕</button>
+  <button class="lb-nav lb-prev" id="lb-prev" aria-label="Previous photograph">←</button>
+  <figure class="lb-fig">
+    <img id="lb-img" src="" alt="">
+  </figure>
+  <button class="lb-nav lb-next" id="lb-next" aria-label="Next photograph">→</button>
+  <div class="lb-meta"><span id="lb-cat"></span><span id="lb-idx"></span></div>
+</div>
+
+<script src="js/data.js"></script>
 <script src="js/main.js"></script>
 </body>
 </html>
