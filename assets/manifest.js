@@ -502,7 +502,7 @@ window.PORTFOLIO = {
     {
       "id": "wildlife",
       "title": "Wildlife",
-      "desc": "Birds, big cats, and the occasional goat with a famous name.",
+      "desc": "A fleeting encounter, leaving behind wonder, mystery, and a feeling that lingers long after.",
       "count": 29,
       "cover": {
         "f": "Sun conure_.jpg",
@@ -1365,7 +1365,7 @@ window.PORTFOLIO = {
     {
       "id": "product",
       "title": "Product",
-      "desc": "Shaping every detail to make an object not just seen, but desired - product.",
+      "desc": "Shaping every detail to make an object not just seen, but desired",
       "count": 13,
       "cover": {
         "f": "Bellavita_.jpg",
