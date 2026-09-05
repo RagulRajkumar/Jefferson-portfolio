@@ -12,7 +12,7 @@ window.PORTFOLIO = {
     {
       "id": "portrait",
       "title": "Portrait",
-      "desc": "Faces met on the road and in the studio — musicians, makers, brides, and the people who stop to talk.",
+      "desc": "Capturing the stories we carry in the moments we rarely notice.",
       "count": 18,
       "cover": {
         "f": "Musicians_.jpg",
@@ -162,7 +162,7 @@ window.PORTFOLIO = {
     {
       "id": "landscape",
       "title": "Landscape",
-      "desc": "Udaipur’s lakes, the Thar, the Western Ghats — waiting for the light to do something.",
+      "desc": "Exploring the character of places in all their forms, from mountains to the edges of cities.",
       "count": 16,
       "cover": {
         "f": "Scenic stay_.jpg",
@@ -312,7 +312,7 @@ window.PORTFOLIO = {
     {
       "id": "architecture",
       "title": "Architecture",
-      "desc": "Forts, palaces, stepwells and doorways across Rajasthan and Tamil Nadu.",
+      "desc": "Documenting spaces shaped by elemental structures through one’s perspective.",
       "count": 21,
       "cover": {
         "f": "Hawah Mahal, Jaipur.jpg",
@@ -756,7 +756,7 @@ window.PORTFOLIO = {
     {
       "id": "fashion",
       "title": "Fashion",
-      "desc": "Studio editorials in hard light, gels and smoke.",
+      "desc": "What we wear becomes a language of its own.",
       "count": 14,
       "cover": {
         "f": "Model Sitting (Male).jpg",
@@ -890,7 +890,7 @@ window.PORTFOLIO = {
     {
       "id": "event",
       "title": "Event",
-      "desc": "Stage, runway and graduation — colour under moving light.",
+      "desc": "Unscripted moments, interactions, and everything worth remembering.",
       "count": 13,
       "cover": {
         "f": "kantara dance couple 1.jpg",
@@ -1491,7 +1491,7 @@ window.PORTFOLIO = {
     {
       "id": "painting",
       "title": "Painting Recreation",
-      "desc": "A classical Indian painting restaged as a photograph, shown beside its reference.",
+      "desc": "Bringing the stillness of old paintings back into a living frame.",
       "count": 2,
       "cover": {
         "f": "Recreation of Women with Sitar.jpg",
