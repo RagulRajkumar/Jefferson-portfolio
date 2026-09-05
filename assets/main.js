@@ -191,7 +191,7 @@ const Album = (() => {
       fig.style.setProperty("--avg", im.avg);
       fig.innerHTML =
         `<canvas role="img" aria-label="${esc(im.t)} — ${esc(a.title)} photograph by Ronald Jefferson"></canvas>` +
-        `<figcaption><span>${esc(im.t)}</span><i>${pad2(k + 1)}</i></figcaption>`;
+        `<figcaption><span>${esc(im.t)}</span></figcaption>`;
       const cv = fig.querySelector("canvas");
       cv.dataset.lazy = im.src;
       fig.addEventListener("click", () => Router.go(`#/${a.id}/${k + 1}`));
@@ -254,10 +254,11 @@ const Album = (() => {
     if (open === i) return;
     open = i;
     clearTimeout(hideTimer);
-    kicker.textContent = `Album ${pad2(i + 1)} of ${N} · ${a.count} photographs`;
+    // kicker.textContent = `Album ${pad2(i + 1)} of ${N} · ${a.count} photographs`;
+    kicker.textContent = "";
     title.textContent = a.title;
     desc.textContent = a.desc;
-    pos.textContent = `${pad2(i + 1)} / ${pad2(N)}`;
+    // pos.textContent = `${pad2(i + 1)} / ${pad2(N)}`;
     const p = ALBUMS[(i - 1 + N) % N], n = ALBUMS[(i + 1) % N];
     prevLink.href = `#/${p.id}`; prevLink.querySelector("span").textContent = p.title;
     nextLink.href = `#/${n.id}`; nextLink.querySelector("span").textContent = n.title;
@@ -326,7 +327,7 @@ const Router = (() => {
 /* ---------- The reel ------------------------------------------------------ */
 const Reel = (() => {
   const section = $("#work"), reel = $("#reel"), track = $("#reel-track"), ticker = $("#reel-ticker");
-  const hint = $("#reel-hint"), prog = $("#reel-progress-fill"), idxEl = $("#reel-idx");
+  const prog = $("#reel-progress-fill"), idxEl = $("#reel-idx");
   const frames = [];
   const AUTO_MS = 5200, IDLE_MS = 7000;
   const DRAG_GAIN = 1.4;                       // pointer travel is amplified: ~70% of a frame width turns one frame
@@ -351,8 +352,8 @@ const Reel = (() => {
   }
 
   function build() {
-    $("#reel-total").textContent = `${N} albums · ${D.total} photographs`;
-    $("#reel-n").textContent = `/ ${pad2(N)}`;
+    $("#reel-total").textContent = "";
+    $("#reel-n").textContent = "";
     ALBUMS.forEach((a, i) => {
       const el = document.createElement("div");
       el.className = "frame";
@@ -361,8 +362,10 @@ const Reel = (() => {
       el.innerHTML =
         `<button class="frame-in" type="button" data-box style="--avg:${a.cover.avg}" aria-label="Open the ${esc(a.title)} album — ${a.count} photographs">` +
           `<canvas aria-hidden="true"></canvas>` +
-          `<span class="frame-title"><small>Album ${pad2(i + 1)} · ${a.count} photographs</small>` +
-          `<span class="ft">${esc(a.title)}</span><span class="pill">View album</span></span>` +
+          `<span class="frame-title">` +
+          `<span class="ft">${esc(a.title)}</span>` +
+          `<span class="pill">View album</span>` +
+          `</span>` +
         `</button>`;
       el.querySelector("button").addEventListener("click", () => {
         if (moved || !introDone) return;
@@ -441,14 +444,39 @@ const Reel = (() => {
       if (!introDone && Math.abs(target - pos) < 0.02) { introDone = true; dirty = true; }   // visually settled: light the centre frame
     }
     if (pos !== rendered || dirty) { render(); rendered = pos; dirty = false; }
-    const canAuto = !CALM && introDone && !dragging && !wheeling && !hover && !kbFocus && Album.current < 0 && inView &&
-                    document.visibilityState === "visible" && now - lastInteract > IDLE_MS;
+    const canAuto =
+      !CALM &&
+      introDone &&
+      !dragging &&
+      !wheeling &&
+      !kbFocus &&
+      Album.current < 0 &&
+      inView &&
+      document.visibilityState === "visible" &&
+      now - lastInteract > IDLE_MS;
+
     if (canAuto) {
       if (!autoStart) autoStart = now;
+
       const t = (now - autoStart) / AUTO_MS;
-      prog.style.transform = `scaleX(${Math.min(t, 1).toFixed(4)})`;
-      if (t >= 1) { autoStart = now; target = Math.round(target) + 1; hint.classList.add("gone"); }
-    } else { autoStart = 0; prog.style.transform = "scaleX(0)"; }
+
+      if (t >= 1) {
+        // Move to next album
+        target = Math.round(target) + 1;
+
+        // Reset loader
+        autoStart = now;
+        prog.style.transform = "scaleX(0)";
+
+        // Force reel to update
+        dirty = true;
+      } else {
+        prog.style.transform = `scaleX(${t.toFixed(4)})`;
+      }
+    } else {
+      autoStart = 0;
+      prog.style.transform = "scaleX(0)";
+    }
     if (!inView && Math.abs(target - pos) < 0.0004 && introDone) { running = false; return; }
     requestAnimationFrame(loop);
   }
@@ -458,7 +486,10 @@ const Reel = (() => {
     if (CALM) { pos = target; introDone = true; }
     start();
   }
-  function interact() { lastInteract = performance.now(); hint.classList.add("gone"); start(); }
+  function interact() {
+    lastInteract = performance.now();
+    start();
+  }
   function goto(i)  { if (i < 0) return; target = Math.round(target) + offset(i, Math.round(target)); interact(); }
   function step(d)  { target = Math.round(target) + d; interact(); }
 
@@ -542,8 +573,8 @@ const Reel = (() => {
   });
   $("#reel-prev").addEventListener("click", () => step(-1));
   $("#reel-next").addEventListener("click", () => step(1));
-  reel.addEventListener("pointerenter", (e) => { if (e.pointerType === "mouse") hover = true; });
-  reel.addEventListener("pointerleave", (e) => { if (e.pointerType === "mouse") hover = false; });
+  // reel.addEventListener("pointerenter", (e) => { if (e.pointerType === "mouse") hover = true; });
+  // reel.addEventListener("pointerleave", (e) => { if (e.pointerType === "mouse") hover = false; });
   reel.addEventListener("focusin", (e) => { kbFocus = e.target.matches(":focus-visible"); });
   reel.addEventListener("focusout", () => { kbFocus = false; });
   addEventListener("resize", onResize, { passive: true });
