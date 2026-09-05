@@ -1,78 +1,84 @@
-# Ronald Jefferson — Photography
+# Ronald Jefferson — Photographer
 
-A three-page cinematic photography portfolio. Plain HTML, CSS and JavaScript —
-no build step, no framework, no dependencies. Open `index.html`, or serve the
-folder over any static host.
+A single-page photography portfolio. Plain HTML, CSS and JavaScript — no build
+step, no framework, no dependencies. Photographs are served **in place, at full
+resolution** from `portfolio-images/`; nothing is resized, re-encoded or copied.
 
 ```
-index.html
-css/style.css
-js/data.js      generated asset manifest (see "Adding photographs")
-js/main.js
-images/         originals, used for the lightbox
-images/thumb/   900px derivatives, used everywhere else
+index.html                  the page
+assets/style.css            styles
+assets/main.js              reel, album view, lightbox, routing
+assets/manifest.js          generated — albums, covers, captions, sizes, colours
+assets/build-manifest.py    generates manifest.js from portfolio-images/
+portfolio-images/           the photographs, one folder per album (+ Profile photo)
 ```
 
-## The three pages
+Everything else in this folder (`Jeff/`, `site/`, `site.zip`,
+`Portfolio Website/`, `Ronald Jefferson Portfolio.html`) is an older version and
+is not used by this site.
 
-**About** is one continuous sequence rather than a stack of sections. The name
-is built in depth — contact-sheet cards sit both behind and in front of the
-type. Scrolling then moves through a pinned statement that opens through a
-widening aperture, an annotated portrait whose stroke draws itself, a marquee
-tied to scroll velocity, and an index of disciplines that hands off to the roll.
+## Run it locally
 
-**Work** is a 35mm roll laid on its side. Page scroll is the single source of
-truth for its position, so the wheel, dragging, swiping, the arrow keys and the
-ticker can never disagree with each other. Opening the centre frame unspools
-that category into a vertical reel; clicking a photograph grows it into the
-lightbox and shrinks it back to the same spot on close.
+Open `index.html` directly, or serve the folder:
 
-**Contact** closes the sequence with large type, magnetic rows and a final
-call to action.
+```bash
+cd path/to/this/folder
+python3 -m http.server 8000        # then open http://localhost:8000/
+```
 
-## Design notes
+## The page
 
-The ground is a warm, slightly green-shifted black — unexposed film base. The
-only saturated colour in the interface is a lichen olive; amber appears
-exclusively as *light* (leaks, glows, the wash behind a frame) and never as a
-fill, so it can't compete with the photographs. Display type is Fraunces at
-high optical size, metadata is Inter, and film edge codes are set in a system
-monospace, which is what such codes are actually printed in.
-
-Typefaces load from Google Fonts. The fallback stack is Iowan Old Style /
-Georgia, so the page still reads properly if that request fails.
+- **Reel** — the albums as a horizontal 3D reel. The album title sits centred on
+  its cover; the centre frame is full colour, its neighbours dimmed. It autoplays
+  gently, and reacts to drag, swipe, trackpad swipe, ← → keys and the album
+  ticker. Clicking the centre frame zooms the cover into the album view.
+- **Album view** — the cover as a banner with the title centred on it, then every
+  photograph in justified rows at its true aspect ratio (nothing cropped). Rows
+  are laid out from the pixel sizes in the manifest, so there is no layout shift.
+- **Lightbox** — full-resolution original, ← → keys, swipe, Esc.
+- **About / Selected frames / Contact** below the reel.
+- Routes are shareable: `#/wildlife` opens an album, `#/wildlife/2` a photograph.
 
 ## Adding or changing photographs
 
-Drop files into `images/<category>/` and regenerate the manifest — the site
-reads categories, counts, covers and real pixel dimensions from `js/data.js`,
-and nothing is hardcoded in the markup.
+1. Drop files into the album folder inside `portfolio-images/` (jpg, png, webp).
+2. Optionally set their order, a caption fix or a new cover in
+   `assets/build-manifest.py` (`ALBUMS` → `order`, `cover`, `coverM`; `CAPTIONS`).
+   Anything not listed is appended alphabetically and captioned from its filename.
+3. Re-run the generator (needs Python 3 with Pillow):
 
 ```bash
-python3 tools/build-manifest.py
+python3 assets/build-manifest.py
 ```
 
-The manifest carries each image's true width and height, which is what lets the
-reel lay out by real aspect ratio without any layout shift. Covers are chosen
-automatically, favouring a mid-bright, roughly 3:2 frame; override one by
-editing its `cover` field.
+Covers: `cover` is used on desktop (3:2 frame), `coverM` on phones (4:5 frame).
+The two numbers after a cover are its focal point in percent (like CSS
+`object-position`), so the crop keeps the subject where you want it.
 
-## Performance
+## Before deploying
 
-The first screen loads one photograph. The eight roll covers are warmed once
-the visitor scrolls past the hero rather than lazily, because a 3D-transformed
-element reports its intersection late and the centre frame could otherwise
-arrive blank. Everything else is lazy-loaded 700px ahead. Full-resolution files
-are fetched only by the lightbox. All scroll-linked work runs in a single
-`requestAnimationFrame` loop and animates transform and opacity only.
+- Upload `index.html`, `assets/` and `portfolio-images/` together.
+- Folder names must match `assets/manifest.js` exactly. In the shared zip the
+  album folders have plain names. In the original working folder on the Mac four
+  of them end with a trailing space (`Wedding Photography `, `Sports photography `,
+  `Painting Recreation `, `Profile photo `), which Windows and some hosts
+  mishandle; if you work from that folder, rename them and re-run the generator:
 
-## Accessibility
+```bash
+cd portfolio-images
+for d in */; do n="${d%/}"; t="$(echo "$n" | sed 's/[[:space:]]*$//')"; [ "$n" != "$t" ] && mv "$n" "$t"; done
+cd .. && python3 assets/build-manifest.py
+```
 
-Semantic landmarks, a skip link, visible focus rings, alt text on every
-photograph, and full keyboard control: arrow keys and Home/End move the roll,
-Enter opens a reel, Escape steps back out one level at a time.
-
-`prefers-reduced-motion` is treated as a real request rather than a slower
-version of the same thing. Parallax, the marquee, the drifting cards, the
-scroll cue and the roll's 3D depth are all switched off; the aperture is simply
-open, and every element is present rather than waiting to be revealed.
+- The photographs total ~1.5 GB (164 files, 0.1–36 MB each). The site loads
+  them lazily and shows each photograph's average colour while it arrives, but a
+  30 MB original still takes several seconds on an average connection. That is
+  the cost of serving originals; if it ever matters, generating web-size copies
+  is a one-line change in the generator, not a redesign.
+- Rendering: browsers re-decode an image every time it scrolls back into view,
+  and decoding a 50-megapixel JPEG takes hundreds of milliseconds, which made the
+  reel stutter. So covers, grid frames and the selected frames are each drawn
+  once into a canvas at screen resolution and never decoded again. The files are
+  untouched and the lightbox always shows the original.
+- Contact details in `index.html` (email, phone, Instagram `@DSC16042002`) were carried
+  over from the earlier build — confirm them with Ronald before going live.
