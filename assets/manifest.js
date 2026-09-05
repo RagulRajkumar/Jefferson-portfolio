@@ -1145,7 +1145,7 @@ window.PORTFOLIO = {
     {
       "id": "sports",
       "title": "Sports",
-      "desc": "Turf under floodlights, and a women’s athletics meet.",
+      "desc": "Turning fractions of a second into frames where instinct, skill, and motion come alive.",
       "count": 11,
       "cover": {
         "f": "Football - Turf 1.jpg",
@@ -1255,7 +1255,7 @@ window.PORTFOLIO = {
     {
       "id": "food",
       "title": "Food",
-      "desc": "Chai, tikka, ramen and dessert — shot dark and close.",
+      "desc": "Stir the appetite. To look. Linger. Take a bite.",
       "count": 11,
       "cover": {
         "f": "Chai.jpg",
@@ -1365,7 +1365,7 @@ window.PORTFOLIO = {
     {
       "id": "product",
       "title": "Product",
-      "desc": "Perfume, chocolate, skincare and drinks — styled and lit in the studio.",
+      "desc": "Shaping every detail to make an object not just seen, but desired - product.",
       "count": 13,
       "cover": {
         "f": "Bellavita_.jpg",
