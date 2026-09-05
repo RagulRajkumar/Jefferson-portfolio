@@ -433,14 +433,14 @@ window.PORTFOLIO = {
           "h": 1144,
           "avg": "#8b714d"
         },
-        {
-          "f": "Amer Fort, Jaipur.jpg",
-          "t": "Amer Fort, Jaipur · mural",
-          "src": "portfolio-images/Architecture%20Photography/Amer%20Fort%2C%20Jaipur%201.jpg",
-          "w": 1144,
-          "h": 1369,
-          "avg": "#89876e"
-        },
+        // {
+        //   "f": "Amer Fort, Jaipur.jpg",
+        //   "t": "Amer Fort, Jaipur · mural",
+        //   "src": "portfolio-images/Architecture%20Photography/Amer%20Fort%2C%20Jaipur%201.jpg",
+        //   "w": 1144,
+        //   "h": 1369,
+        //   "avg": "#89876e"
+        // },
         {
           "f": "Meherangargh Fort, Jodhpur.jpg",
           "t": "Mehrangarh Fort, Jodhpur",
