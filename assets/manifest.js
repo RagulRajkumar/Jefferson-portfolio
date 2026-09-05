@@ -356,7 +356,7 @@ window.PORTFOLIO = {
         {
           "f": "Bada Bagh, Jaisalmer 2.jpg",
           "t": "Bada Bagh, Jaisalmer · II",
-          "src": "portfolio-images/Architecture%20Photography/Bada%20Bagh%2C%20Jaisalmer%202.jpg",
+          "src": "portfolio-images/Architecture%20Photography/Bada%20Bagh%202.jpg",
           "w": 2087,
           "h": 1406,
           "avg": "#66625c"
@@ -396,7 +396,7 @@ window.PORTFOLIO = {
         {
           "f": "Darbar Hall, Meharangargh Fort.jpg",
           "t": "Darbar Hall, Mehrangarh Fort",
-          "src": "portfolio-images/Architecture%20Photography/Darbar%20Hall%2C%20Meharangargh%20Fort.jpg",
+          "src": "portfolio-images/Architecture%20Photography/Darbar%20Hall.jpg",
           "w": 1965,
           "h": 1106,
           "avg": "#7f4c2a"
@@ -420,7 +420,7 @@ window.PORTFOLIO = {
         {
           "f": "Ghost Village, Jaisalmer.jpg",
           "t": "Ghost Village, Jaisalmer",
-          "src": "portfolio-images/Architecture%20Photography/Ghost%20Village%2C%20Jaisalmer.jpg",
+          "src": "portfolio-images/Architecture%20Photography/Ghost Village 1.jpg",
           "w": 1959,
           "h": 1368,
           "avg": "#946a3d"
@@ -428,7 +428,7 @@ window.PORTFOLIO = {
         {
           "f": "Jal Mahal, Jaipur.jpg",
           "t": "Jal Mahal, Jaipur",
-          "src": "portfolio-images/Architecture%20Photography/Jal%20Mahal%2C%20Jaipur.jpg",
+          "src": "portfolio-images/Architecture%20Photography/Jal%20Mahal.jpg",
           "w": 3122,
           "h": 1144,
           "avg": "#8b714d"
@@ -436,7 +436,7 @@ window.PORTFOLIO = {
         {
           "f": "Amer Fort, Jaipur.jpg",
           "t": "Amer Fort, Jaipur · mural",
-          "src": "portfolio-images/Architecture%20Photography/Amer%20Fort%2C%20Jaipur.jpg",
+          "src": "portfolio-images/Architecture%20Photography/Amer%20Fort%2C%20Jaipur%201.jpg",
           "w": 1144,
           "h": 1369,
           "avg": "#89876e"
@@ -468,7 +468,7 @@ window.PORTFOLIO = {
         {
           "f": "Panna Meena ka Kund.jpg",
           "t": "Panna Meena ka Kund",
-          "src": "portfolio-images/Architecture%20Photography/Panna%20Meena%20ka%20Kund.jpg",
+          "src": "portfolio-images/Architecture%20Photography/Pana%20meena%20ka%20kund.jpg",
           "w": 2496,
           "h": 1406,
           "avg": "#606060"
@@ -720,17 +720,17 @@ window.PORTFOLIO = {
           "avg": "#8b8c5c"
         },
         {
-          "f": "IMG_20250417_163723.jpg",
-          "t": "By the weir",
-          "src": "portfolio-images/Wildlife%20Photography/IMG_20250417_163723.jpg",
+          "f": "Red-wattled Lapwing_.jpg",
+          "t": "Red-wattled Lapwing",
+          "src": "portfolio-images/Wildlife%20Photography/Red-wattled Lapwing_.jpg",
           "w": 3267,
           "h": 2178,
           "avg": "#4c523f"
         },
         {
-          "f": "TVK.jpg",
-          "t": "TVK",
-          "src": "portfolio-images/Wildlife%20Photography/TVK.jpg",
+          "f": "Wild squirrel_.jpg",
+          "t": "Wild squirrel",
+          "src": "portfolio-images/Wildlife%20Photography/Wild squirrel_.jpg",
           "w": 1400,
           "h": 1050,
           "avg": "#808156"
