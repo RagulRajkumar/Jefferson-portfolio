@@ -10,6 +10,260 @@ window.PORTFOLIO = {
   },
   "albums": [
     {
+      "id": "wildlife",
+      "title": "Wildlife",
+      "desc": "A fleeting encounter, leaving behind wonder, mystery, and a feeling that lingers long after.",
+      "count": 29,
+      "cover": {
+        "f": "Sun conure_.jpg",
+        "src": "portfolio-images/Wildlife%20Photography/Sun%20conure_.jpg",
+        "x": 50,
+        "y": 50,
+        "avg": "#1c2915"
+      },
+      "coverM": {
+        "f": "Sun conure_.jpg",
+        "src": "portfolio-images/Wildlife%20Photography/Sun%20conure_.jpg",
+        "x": 50,
+        "y": 50,
+        "avg": "#9aa861"
+      },
+      "images": [
+        {
+          "f": "Sun conure_.jpg",
+          "t": "Sun conure",
+          "src": "portfolio-images/Wildlife%20Photography/Sun%20conure_.jpg",
+          "w": 9504,
+          "h": 5344,
+          "avg": "#1c2915"
+        },
+        {
+          "f": "Durai Singam.jpg",
+          "t": "Durai Singam",
+          "src": "portfolio-images/Wildlife%20Photography/Durai%20Singam.jpg",
+          "w": 3484,
+          "h": 3483,
+          "avg": "#645e45"
+        },
+        {
+          "f": "Cockatoo_.jpg",
+          "t": "Cockatoo",
+          "src": "portfolio-images/Wildlife%20Photography/Cockatoo_.jpg",
+          "w": 9401,
+          "h": 5289,
+          "avg": "#171815"
+        },
+        {
+          "f": "Cheetah_.jpg",
+          "t": "Cheetah",
+          "src": "portfolio-images/Wildlife%20Photography/Cheetah_.jpg",
+          "w": 5328,
+          "h": 4000,
+          "avg": "#5f665d"
+        },
+        {
+          "f": "King Of Good Times 1.jpg",
+          "t": "King of Good Times · I",
+          "src": "portfolio-images/Wildlife%20Photography/King%20Of%20Good%20Times%201.jpg",
+          "w": 2848,
+          "h": 3797,
+          "avg": "#9aa861"
+        },
+        {
+          "f": "Deer and calf.jpg",
+          "t": "Deer and calf",
+          "src": "portfolio-images/Wildlife%20Photography/Deer%20and%20calf.jpg",
+          "w": 4000,
+          "h": 4000,
+          "avg": "#595a46"
+        },
+        {
+          "f": "Lion tailed Monkey_.jpg",
+          "t": "Lion-tailed monkey",
+          "src": "portfolio-images/Wildlife%20Photography/Lion%20tailed%20Monkey_.jpg",
+          "w": 4724,
+          "h": 6299,
+          "avg": "#4c5035"
+        },
+        {
+          "f": "Oh Butterfly.jpg",
+          "t": "Oh Butterfly",
+          "src": "portfolio-images/Wildlife%20Photography/Oh%20Butterfly.jpg",
+          "w": 7214,
+          "h": 4056,
+          "avg": "#455228"
+        },
+        {
+          "f": "Messi.jpg",
+          "t": "Messi",
+          "src": "portfolio-images/Wildlife%20Photography/Messi.jpg",
+          "w": 8004,
+          "h": 4502,
+          "avg": "#58722b"
+        },
+        {
+          "f": "Lewis Hamilton.jpg",
+          "t": "Lewis Hamilton",
+          "src": "portfolio-images/Wildlife%20Photography/Lewis%20Hamilton.jpg",
+          "w": 7926,
+          "h": 5944,
+          "avg": "#514a39"
+        },
+        {
+          "f": "IlayaMaan.jpg",
+          "t": "IlayaMaan",
+          "src": "portfolio-images/Wildlife%20Photography/IlayaMaan.jpg",
+          "w": 3989,
+          "h": 2992,
+          "avg": "#39332d"
+        },
+        {
+          "f": "Kulla Nari.jpg",
+          "t": "Kulla Nari",
+          "src": "portfolio-images/Wildlife%20Photography/Kulla%20Nari.jpg",
+          "w": 5328,
+          "h": 4000,
+          "avg": "#5c5a52"
+        },
+        {
+          "f": "Little Egret.jpg",
+          "t": "Little Egret",
+          "src": "portfolio-images/Wildlife%20Photography/Little%20Egret.jpg",
+          "w": 2537,
+          "h": 3382,
+          "avg": "#6b6766"
+        },
+        {
+          "f": "Black stork.jpg",
+          "t": "Black stork",
+          "src": "portfolio-images/Wildlife%20Photography/Black%20stork.jpg",
+          "w": 2595,
+          "h": 2595,
+          "avg": "#898967"
+        },
+        {
+          "f": "Tanimbar Corella.jpg",
+          "t": "Tanimbar Corella",
+          "src": "portfolio-images/Wildlife%20Photography/Tanimbar%20Corella.jpg",
+          "w": 7125,
+          "h": 5343,
+          "avg": "#2e3526"
+        },
+        {
+          "f": "Bird Nest_.jpg",
+          "t": "Bird nest",
+          "src": "portfolio-images/Wildlife%20Photography/Bird%20Nest_.jpg",
+          "w": 7974,
+          "h": 4486,
+          "avg": "#4a534f"
+        },
+        {
+          "f": "Bird pooping_.jpg",
+          "t": "Bird pooping",
+          "src": "portfolio-images/Wildlife%20Photography/Bird%20pooping_.jpg",
+          "w": 8448,
+          "h": 6336,
+          "avg": "#22382d"
+        },
+        {
+          "f": "King of Good Times 2.webp",
+          "t": "King of Good Times · II",
+          "src": "portfolio-images/Wildlife%20Photography/King%20of%20Good%20Times%202.webp",
+          "w": 1734,
+          "h": 2312,
+          "avg": "#4b5244"
+        },
+        {
+          "f": "Little Cormorant_.jpg",
+          "t": "Little cormorant",
+          "src": "portfolio-images/Wildlife%20Photography/Little%20Cormorant_.jpg",
+          "w": 1222,
+          "h": 1659,
+          "avg": "#5e6b32"
+        },
+        {
+          "f": "Little Cormorant 2.jpg",
+          "t": "Little cormorant · II",
+          "src": "portfolio-images/Wildlife%20Photography/Little%20Cormorant%202.jpg",
+          "w": 1578,
+          "h": 1106,
+          "avg": "#70879c"
+        },
+        {
+          "f": "Red Naped Ibis.jpg",
+          "t": "Red-naped ibis",
+          "src": "portfolio-images/Wildlife%20Photography/Red%20Naped%20Ibis.jpg",
+          "w": 1388,
+          "h": 1116,
+          "avg": "#98a464"
+        },
+        {
+          "f": "Duck.jpg",
+          "t": "Duck",
+          "src": "portfolio-images/Wildlife%20Photography/Duck.jpg",
+          "w": 8147,
+          "h": 4582,
+          "avg": "#494a45"
+        },
+        {
+          "f": "Meow.jpg",
+          "t": "Meow",
+          "src": "portfolio-images/Wildlife%20Photography/Meow.jpg",
+          "w": 2927,
+          "h": 2194,
+          "avg": "#565755"
+        },
+        {
+          "f": "Lizard_.jpg",
+          "t": "Lizard",
+          "src": "portfolio-images/Wildlife%20Photography/Lizard_.jpg",
+          "w": 3118,
+          "h": 1754,
+          "avg": "#1f1a16"
+        },
+        {
+          "f": "Grasshopper_.jpg",
+          "t": "Grasshopper",
+          "src": "portfolio-images/Wildlife%20Photography/Grasshopper_.jpg",
+          "w": 1387,
+          "h": 784,
+          "avg": "#8b8c5c"
+        },
+        {
+          "f": "Red-wattled Lapwing_.jpg",
+          "t": "Red-wattled Lapwing",
+          "src": "portfolio-images/Wildlife%20Photography/Red-wattled Lapwing_.jpg",
+          "w": 3267,
+          "h": 2178,
+          "avg": "#4c523f"
+        },
+        {
+          "f": "Wild squirrel_.jpg",
+          "t": "Wild squirrel",
+          "src": "portfolio-images/Wildlife%20Photography/Wild squirrel_.jpg",
+          "w": 1400,
+          "h": 1050,
+          "avg": "#808156"
+        },
+        {
+          "f": "Crane.jpg",
+          "t": "Crane",
+          "src": "portfolio-images/Wildlife%20Photography/Crane.jpg",
+          "w": 1562,
+          "h": 781,
+          "avg": "#898d47"
+        },
+        {
+          "f": "camel.jpg",
+          "t": "Camel",
+          "src": "portfolio-images/Wildlife%20Photography/camel.jpg",
+          "w": 1581,
+          "h": 853,
+          "avg": "#7c5f52"
+        }
+      ]
+    },
+    {
       "id": "portrait",
       "title": "Portrait",
       "desc": "Capturing the stories we carry in the moments we rarely notice.",
@@ -496,260 +750,6 @@ window.PORTFOLIO = {
           "w": 9504,
           "h": 5344,
           "avg": "#9b7761"
-        }
-      ]
-    },
-    {
-      "id": "wildlife",
-      "title": "Wildlife",
-      "desc": "A fleeting encounter, leaving behind wonder, mystery, and a feeling that lingers long after.",
-      "count": 29,
-      "cover": {
-        "f": "Sun conure_.jpg",
-        "src": "portfolio-images/Wildlife%20Photography/Sun%20conure_.jpg",
-        "x": 50,
-        "y": 50,
-        "avg": "#1c2915"
-      },
-      "coverM": {
-        "f": "Sun conure_.jpg",
-        "src": "portfolio-images/Wildlife%20Photography/Sun%20conure_.jpg",
-        "x": 50,
-        "y": 50,
-        "avg": "#9aa861"
-      },
-      "images": [
-        {
-          "f": "Sun conure_.jpg",
-          "t": "Sun conure",
-          "src": "portfolio-images/Wildlife%20Photography/Sun%20conure_.jpg",
-          "w": 9504,
-          "h": 5344,
-          "avg": "#1c2915"
-        },
-        {
-          "f": "Durai Singam.jpg",
-          "t": "Durai Singam",
-          "src": "portfolio-images/Wildlife%20Photography/Durai%20Singam.jpg",
-          "w": 3484,
-          "h": 3483,
-          "avg": "#645e45"
-        },
-        {
-          "f": "Cockatoo_.jpg",
-          "t": "Cockatoo",
-          "src": "portfolio-images/Wildlife%20Photography/Cockatoo_.jpg",
-          "w": 9401,
-          "h": 5289,
-          "avg": "#171815"
-        },
-        {
-          "f": "Cheetah_.jpg",
-          "t": "Cheetah",
-          "src": "portfolio-images/Wildlife%20Photography/Cheetah_.jpg",
-          "w": 5328,
-          "h": 4000,
-          "avg": "#5f665d"
-        },
-        {
-          "f": "King Of Good Times 1.jpg",
-          "t": "King of Good Times · I",
-          "src": "portfolio-images/Wildlife%20Photography/King%20Of%20Good%20Times%201.jpg",
-          "w": 2848,
-          "h": 3797,
-          "avg": "#9aa861"
-        },
-        {
-          "f": "Deer and calf.jpg",
-          "t": "Deer and calf",
-          "src": "portfolio-images/Wildlife%20Photography/Deer%20and%20calf.jpg",
-          "w": 4000,
-          "h": 4000,
-          "avg": "#595a46"
-        },
-        {
-          "f": "Lion tailed Monkey_.jpg",
-          "t": "Lion-tailed monkey",
-          "src": "portfolio-images/Wildlife%20Photography/Lion%20tailed%20Monkey_.jpg",
-          "w": 4724,
-          "h": 6299,
-          "avg": "#4c5035"
-        },
-        {
-          "f": "Oh Butterfly.jpg",
-          "t": "Oh Butterfly",
-          "src": "portfolio-images/Wildlife%20Photography/Oh%20Butterfly.jpg",
-          "w": 7214,
-          "h": 4056,
-          "avg": "#455228"
-        },
-        {
-          "f": "Messi.jpg",
-          "t": "Messi",
-          "src": "portfolio-images/Wildlife%20Photography/Messi.jpg",
-          "w": 8004,
-          "h": 4502,
-          "avg": "#58722b"
-        },
-        {
-          "f": "Lewis Hamilton.jpg",
-          "t": "Lewis Hamilton",
-          "src": "portfolio-images/Wildlife%20Photography/Lewis%20Hamilton.jpg",
-          "w": 7926,
-          "h": 5944,
-          "avg": "#514a39"
-        },
-        {
-          "f": "IlayaMaan.jpg",
-          "t": "IlayaMaan",
-          "src": "portfolio-images/Wildlife%20Photography/IlayaMaan.jpg",
-          "w": 3989,
-          "h": 2992,
-          "avg": "#39332d"
-        },
-        {
-          "f": "Kulla Nari.jpg",
-          "t": "Kulla Nari",
-          "src": "portfolio-images/Wildlife%20Photography/Kulla%20Nari.jpg",
-          "w": 5328,
-          "h": 4000,
-          "avg": "#5c5a52"
-        },
-        {
-          "f": "Little Egret.jpg",
-          "t": "Little Egret",
-          "src": "portfolio-images/Wildlife%20Photography/Little%20Egret.jpg",
-          "w": 2537,
-          "h": 3382,
-          "avg": "#6b6766"
-        },
-        {
-          "f": "Black stork.jpg",
-          "t": "Black stork",
-          "src": "portfolio-images/Wildlife%20Photography/Black%20stork.jpg",
-          "w": 2595,
-          "h": 2595,
-          "avg": "#898967"
-        },
-        {
-          "f": "Tanimbar Corella.jpg",
-          "t": "Tanimbar Corella",
-          "src": "portfolio-images/Wildlife%20Photography/Tanimbar%20Corella.jpg",
-          "w": 7125,
-          "h": 5343,
-          "avg": "#2e3526"
-        },
-        {
-          "f": "Bird Nest_.jpg",
-          "t": "Bird nest",
-          "src": "portfolio-images/Wildlife%20Photography/Bird%20Nest_.jpg",
-          "w": 7974,
-          "h": 4486,
-          "avg": "#4a534f"
-        },
-        {
-          "f": "Bird pooping_.jpg",
-          "t": "Bird pooping",
-          "src": "portfolio-images/Wildlife%20Photography/Bird%20pooping_.jpg",
-          "w": 8448,
-          "h": 6336,
-          "avg": "#22382d"
-        },
-        {
-          "f": "King of Good Times 2.webp",
-          "t": "King of Good Times · II",
-          "src": "portfolio-images/Wildlife%20Photography/King%20of%20Good%20Times%202.webp",
-          "w": 1734,
-          "h": 2312,
-          "avg": "#4b5244"
-        },
-        {
-          "f": "Little Cormorant_.jpg",
-          "t": "Little cormorant",
-          "src": "portfolio-images/Wildlife%20Photography/Little%20Cormorant_.jpg",
-          "w": 1222,
-          "h": 1659,
-          "avg": "#5e6b32"
-        },
-        {
-          "f": "Little Cormorant 2.jpg",
-          "t": "Little cormorant · II",
-          "src": "portfolio-images/Wildlife%20Photography/Little%20Cormorant%202.jpg",
-          "w": 1578,
-          "h": 1106,
-          "avg": "#70879c"
-        },
-        {
-          "f": "Red Naped Ibis.jpg",
-          "t": "Red-naped ibis",
-          "src": "portfolio-images/Wildlife%20Photography/Red%20Naped%20Ibis.jpg",
-          "w": 1388,
-          "h": 1116,
-          "avg": "#98a464"
-        },
-        {
-          "f": "Duck.jpg",
-          "t": "Duck",
-          "src": "portfolio-images/Wildlife%20Photography/Duck.jpg",
-          "w": 8147,
-          "h": 4582,
-          "avg": "#494a45"
-        },
-        {
-          "f": "Meow.jpg",
-          "t": "Meow",
-          "src": "portfolio-images/Wildlife%20Photography/Meow.jpg",
-          "w": 2927,
-          "h": 2194,
-          "avg": "#565755"
-        },
-        {
-          "f": "Lizard_.jpg",
-          "t": "Lizard",
-          "src": "portfolio-images/Wildlife%20Photography/Lizard_.jpg",
-          "w": 3118,
-          "h": 1754,
-          "avg": "#1f1a16"
-        },
-        {
-          "f": "Grasshopper_.jpg",
-          "t": "Grasshopper",
-          "src": "portfolio-images/Wildlife%20Photography/Grasshopper_.jpg",
-          "w": 1387,
-          "h": 784,
-          "avg": "#8b8c5c"
-        },
-        {
-          "f": "Red-wattled Lapwing_.jpg",
-          "t": "Red-wattled Lapwing",
-          "src": "portfolio-images/Wildlife%20Photography/Red-wattled Lapwing_.jpg",
-          "w": 3267,
-          "h": 2178,
-          "avg": "#4c523f"
-        },
-        {
-          "f": "Wild squirrel_.jpg",
-          "t": "Wild squirrel",
-          "src": "portfolio-images/Wildlife%20Photography/Wild squirrel_.jpg",
-          "w": 1400,
-          "h": 1050,
-          "avg": "#808156"
-        },
-        {
-          "f": "Crane.jpg",
-          "t": "Crane",
-          "src": "portfolio-images/Wildlife%20Photography/Crane.jpg",
-          "w": 1562,
-          "h": 781,
-          "avg": "#898d47"
-        },
-        {
-          "f": "camel.jpg",
-          "t": "Camel",
-          "src": "portfolio-images/Wildlife%20Photography/camel.jpg",
-          "w": 1581,
-          "h": 853,
-          "avg": "#7c5f52"
         }
       ]
     },
