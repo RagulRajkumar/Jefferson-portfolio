@@ -10,6 +10,140 @@ window.PORTFOLIO = {
   },
   "albums": [
     {
+      "id": "fashion",
+      "title": "Fashion",
+      "desc": "What we wear becomes a language of its own.",
+      "count": 14,
+      "cover": {
+        "f": "Model Sitting (Male).jpg",
+        "src": "portfolio-images/Fashion%20Photography/Model%20Sitting%20%28Male%29.jpg",
+        "x": 50,
+        "y": 22,
+        "avg": "#4e322c"
+      },
+      "coverM": {
+        "f": "Model Sitting (Male).jpg",
+        "src": "portfolio-images/Fashion%20Photography/Model%20Sitting%20%28Male%29.jpg",
+        "x": 50,
+        "y": 20,
+        "avg": "#4e322c"
+      },
+      "images": [
+        {
+          "f": "Model Sitting (Male).jpg",
+          "t": "Sitting, red and blue",
+          "src": "portfolio-images/Fashion%20Photography/Model%20Sitting%20%28Male%29.jpg",
+          "w": 5254,
+          "h": 7006,
+          "avg": "#4e322c"
+        },
+        {
+          "f": "Model Sitting_.jpg",
+          "t": "Sitting",
+          "src": "portfolio-images/Fashion%20Photography/Model%20Sitting_.jpg",
+          "w": 6051,
+          "h": 9081,
+          "avg": "#46525a"
+        },
+        {
+          "f": "Model with Champagne Glass.jpg",
+          "t": "Champagne",
+          "src": "portfolio-images/Fashion%20Photography/Model%20with%20Champagne%20Glass.jpg",
+          "w": 8448,
+          "h": 6336,
+          "avg": "#4e4a49"
+        },
+        {
+          "f": "Model lying (Starlight).jpg",
+          "t": "Starlight",
+          "src": "portfolio-images/Fashion%20Photography/Model%20lying%20%28Starlight%29.jpg",
+          "w": 5883,
+          "h": 7844,
+          "avg": "#3d2f24"
+        },
+        {
+          "f": "Model with Dhup.jpg",
+          "t": "Dhup",
+          "src": "portfolio-images/Fashion%20Photography/Model%20with%20Dhup.jpg",
+          "w": 5467,
+          "h": 7289,
+          "avg": "#41322a"
+        },
+        {
+          "f": "Smoking Model Girl.jpg",
+          "t": "Smoke · II",
+          "src": "portfolio-images/Fashion%20Photography/Smoking%20Model%20Girl.jpg",
+          "w": 6336,
+          "h": 8448,
+          "avg": "#655b54"
+        },
+        {
+          "f": "Women suite_.jpg",
+          "t": "The suit",
+          "src": "portfolio-images/Fashion%20Photography/Women%20suite_.jpg",
+          "w": 6336,
+          "h": 8448,
+          "avg": "#7c7772"
+        },
+        {
+          "f": "Black Cat 1.jpg",
+          "t": "Black Cat · I",
+          "src": "portfolio-images/Fashion%20Photography/Black%20Cat%201.jpg",
+          "w": 6336,
+          "h": 8448,
+          "avg": "#838189"
+        },
+        {
+          "f": "Black Cat 2.jpg",
+          "t": "Black Cat · II",
+          "src": "portfolio-images/Fashion%20Photography/Black%20Cat%202.jpg",
+          "w": 1081,
+          "h": 1440,
+          "avg": "#9b9b9b"
+        },
+        {
+          "f": "Rockstar Model.jpg",
+          "t": "Rockstar",
+          "src": "portfolio-images/Fashion%20Photography/Rockstar%20Model.jpg",
+          "w": 6336,
+          "h": 8448,
+          "avg": "#21203a"
+        },
+        {
+          "f": "Rider_.jpg",
+          "t": "Rider",
+          "src": "portfolio-images/Fashion%20Photography/Rider_.jpg",
+          "w": 1920,
+          "h": 1080,
+          "avg": "#978476"
+        },
+        {
+          "f": "Smoking Model Boy.png",
+          "t": "Smoke · I",
+          "src": "portfolio-images/Fashion%20Photography/Smoking%20Model%20Boy.png",
+          "w": 864,
+          "h": 1184,
+          "avg": "#61321e"
+        },
+        {
+          "f": "Model Reading Book.jpg",
+          "t": "Reading",
+          "src": "portfolio-images/Fashion%20Photography/Model%20Reading%20Book.jpg",
+          "w": 1224,
+          "h": 2176,
+          "avg": "#60656b"
+        },
+        {
+          "f": "Model Lying on Steps.jpg",
+          "t": "Lying on steps",
+          "src": "portfolio-images/Fashion%20Photography/Model%20Lying%20on%20Steps.jpg",
+          "w": 1128,
+          "h": 1390,
+          "avg": "#a7a7a7"
+        }
+      ]
+    },
+    {
       "id": "wildlife",
       "title": "Wildlife",
       "desc": "A fleeting encounter, leaving behind wonder, mystery, and a feeling that lingers long after.",
@@ -750,140 +884,6 @@ window.PORTFOLIO = {
           "w": 9504,
           "h": 5344,
           "avg": "#9b7761"
-        }
-      ]
-    },
-    {
-      "id": "fashion",
-      "title": "Fashion",
-      "desc": "What we wear becomes a language of its own.",
-      "count": 14,
-      "cover": {
-        "f": "Model Sitting (Male).jpg",
-        "src": "portfolio-images/Fashion%20Photography/Model%20Sitting%20%28Male%29.jpg",
-        "x": 50,
-        "y": 22,
-        "avg": "#4e322c"
-      },
-      "coverM": {
-        "f": "Model Sitting (Male).jpg",
-        "src": "portfolio-images/Fashion%20Photography/Model%20Sitting%20%28Male%29.jpg",
-        "x": 50,
-        "y": 20,
-        "avg": "#4e322c"
-      },
-      "images": [
-        {
-          "f": "Model Sitting (Male).jpg",
-          "t": "Sitting, red and blue",
-          "src": "portfolio-images/Fashion%20Photography/Model%20Sitting%20%28Male%29.jpg",
-          "w": 5254,
-          "h": 7006,
-          "avg": "#4e322c"
-        },
-        {
-          "f": "Model Sitting_.jpg",
-          "t": "Sitting",
-          "src": "portfolio-images/Fashion%20Photography/Model%20Sitting_.jpg",
-          "w": 6051,
-          "h": 9081,
-          "avg": "#46525a"
-        },
-        {
-          "f": "Model with Champagne Glass.jpg",
-          "t": "Champagne",
-          "src": "portfolio-images/Fashion%20Photography/Model%20with%20Champagne%20Glass.jpg",
-          "w": 8448,
-          "h": 6336,
-          "avg": "#4e4a49"
-        },
-        {
-          "f": "Model lying (Starlight).jpg",
-          "t": "Starlight",
-          "src": "portfolio-images/Fashion%20Photography/Model%20lying%20%28Starlight%29.jpg",
-          "w": 5883,
-          "h": 7844,
-          "avg": "#3d2f24"
-        },
-        {
-          "f": "Model with Dhup.jpg",
-          "t": "Dhup",
-          "src": "portfolio-images/Fashion%20Photography/Model%20with%20Dhup.jpg",
-          "w": 5467,
-          "h": 7289,
-          "avg": "#41322a"
-        },
-        {
-          "f": "Smoking Model Girl.jpg",
-          "t": "Smoke · II",
-          "src": "portfolio-images/Fashion%20Photography/Smoking%20Model%20Girl.jpg",
-          "w": 6336,
-          "h": 8448,
-          "avg": "#655b54"
-        },
-        {
-          "f": "Women suite_.jpg",
-          "t": "The suit",
-          "src": "portfolio-images/Fashion%20Photography/Women%20suite_.jpg",
-          "w": 6336,
-          "h": 8448,
-          "avg": "#7c7772"
-        },
-        {
-          "f": "Black Cat 1.jpg",
-          "t": "Black Cat · I",
-          "src": "portfolio-images/Fashion%20Photography/Black%20Cat%201.jpg",
-          "w": 6336,
-          "h": 8448,
-          "avg": "#838189"
-        },
-        {
-          "f": "Black Cat 2.jpg",
-          "t": "Black Cat · II",
-          "src": "portfolio-images/Fashion%20Photography/Black%20Cat%202.jpg",
-          "w": 1081,
-          "h": 1440,
-          "avg": "#9b9b9b"
-        },
-        {
-          "f": "Rockstar Model.jpg",
-          "t": "Rockstar",
-          "src": "portfolio-images/Fashion%20Photography/Rockstar%20Model.jpg",
-          "w": 6336,
-          "h": 8448,
-          "avg": "#21203a"
-        },
-        {
-          "f": "Rider_.jpg",
-          "t": "Rider",
-          "src": "portfolio-images/Fashion%20Photography/Rider_.jpg",
-          "w": 1920,
-          "h": 1080,
-          "avg": "#978476"
-        },
-        {
-          "f": "Smoking Model Boy.png",
-          "t": "Smoke · I",
-          "src": "portfolio-images/Fashion%20Photography/Smoking%20Model%20Boy.png",
-          "w": 864,
-          "h": 1184,
-          "avg": "#61321e"
-        },
-        {
-          "f": "Model Reading Book.jpg",
-          "t": "Reading",
-          "src": "portfolio-images/Fashion%20Photography/Model%20Reading%20Book.jpg",
-          "w": 1224,
-          "h": 2176,
-          "avg": "#60656b"
-        },
-        {
-          "f": "Model Lying on Steps.jpg",
-          "t": "Lying on steps",
-          "src": "portfolio-images/Fashion%20Photography/Model%20Lying%20on%20Steps.jpg",
-          "w": 1128,
-          "h": 1390,
-          "avg": "#a7a7a7"
         }
       ]
     },
