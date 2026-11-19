@@ -70,7 +70,7 @@ for d in */; do n="${d%/}"; t="$(echo "$n" | sed 's/[[:space:]]*$//')"; [ "$n" !
 cd .. && python3 assets/build-manifest.py
 ```
 
-- The photographs total ~1.5 GB (164 files, 0.1–36 MB each). The site loads
+- The photographs total ~1.5 GB (167 files, 0.1–36 MB each). The site loads
   them lazily and shows each photograph's average colour while it arrives, but a
   30 MB original still takes several seconds on an average connection. That is
   the cost of serving originals; if it ever matters, generating web-size copies

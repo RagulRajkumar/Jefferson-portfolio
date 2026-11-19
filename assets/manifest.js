@@ -1,7 +1,7 @@
 
 window.PORTFOLIO = {
   "name": "Ronald Jefferson",
-  "total": 164,
+  "total": 167,
   "profile": {
     "src": "portfolio-images/Profile%20photo/Ronald%20Jefferson.jpg",
     "w": 1122,
@@ -13,7 +13,7 @@ window.PORTFOLIO = {
       "id": "fashion",
       "title": "Fashion",
       "desc": "What we wear becomes a language of its own.",
-      "count": 14,
+      "count": 20,
       "cover": {
         "f": "Model Sitting (Male).jpg",
         "src": "portfolio-images/Fashion%20Photography/Model%20Sitting%20%28Male%29.jpg",
@@ -140,6 +140,54 @@ window.PORTFOLIO = {
           "w": 1128,
           "h": 1390,
           "avg": "#a7a7a7"
+        },
+        {
+          "f": "VLS - Lady in Car.jpg",
+          "t": "Lady in the car",
+          "src": "portfolio-images/Fashion%20Photography/VLS%20-%20Lady%20in%20Car.jpg",
+          "w": 9504,
+          "h": 5344,
+          "avg": "#4d3733"
+        },
+        {
+          "f": "VLS- Women with Car.jpg",
+          "t": "Women with the car",
+          "src": "portfolio-images/Fashion%20Photography/VLS-%20Women%20with%20Car.jpg",
+          "w": 9504,
+          "h": 5344,
+          "avg": "#857561"
+        },
+        {
+          "f": "VLS- Lady with Gramophone_.jpg",
+          "t": "Gramophone",
+          "src": "portfolio-images/Fashion%20Photography/VLS-%20Lady%20with%20Gramophone_.jpg",
+          "w": 5344,
+          "h": 9504,
+          "avg": "#4c3113"
+        },
+        {
+          "f": "VLS- Women reading Books_.jpg",
+          "t": "Reading together",
+          "src": "portfolio-images/Fashion%20Photography/VLS-%20Women%20reading%20Books_.jpg",
+          "w": 5344,
+          "h": 9504,
+          "avg": "#5e4637"
+        },
+        {
+          "f": "VLS - Women Looking at each other_.jpg",
+          "t": "Face to face",
+          "src": "portfolio-images/Fashion%20Photography/VLS%20-%20Women%20Looking%20at%20each%20other_.jpg",
+          "w": 9504,
+          "h": 5344,
+          "avg": "#a2946f"
+        },
+        {
+          "f": "VLS- Lady standing inside a Frame.jpg",
+          "t": "In the frame",
+          "src": "portfolio-images/Fashion%20Photography/VLS-%20Lady%20standing%20inside%20a%20Frame.jpg",
+          "w": 5344,
+          "h": 9504,
+          "avg": "#473528"
         }
       ]
     },
